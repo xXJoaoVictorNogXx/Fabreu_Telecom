@@ -4,7 +4,7 @@ export default function Negotiation() {
   return (
     <section className="relative py-24 bg-[var(--color-roxo-900)] border-t border-[var(--color-linha)]">
       <div className="wrap relative z-10">
-        
+
         {/* Bloco 1: Hero de Negociação */}
         <div className="bg-gradient-to-br from-[var(--color-roxo-800)] to-[var(--color-roxo-900)] rounded-[32px] p-8 md:p-14 border border-[var(--color-linha)] mb-8 shadow-2xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--color-linha-forte)] bg-[var(--color-roxo-850)] text-[10px] sm:text-xs font-bold tracking-widest uppercase text-[var(--color-cinza)] mb-6">
@@ -12,7 +12,7 @@ export default function Negotiation() {
             Relação de confiança e parceria
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Facilitamos as coisas para você<br/>
+            Facilitamos as coisas para você<br />
             <span className="text-[var(--color-amarelo)]">Vamos resolver juntos?</span>
           </h2>
           <p className="text-lg text-[var(--color-cinza)] max-w-2xl leading-relaxed">
@@ -75,7 +75,7 @@ export default function Negotiation() {
             </div>
             <h3 className="text-2xl font-bold mb-2">Fale pelo WhatsApp</h3>
             <p className="text-sm text-gray-600 mb-8 flex-1">Negocie de forma rápida, privada e receba as faturas direto no celular.</p>
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="w-full text-center py-4 rounded-xl font-bold text-white bg-[#00D084] hover:bg-[#00b370] transition-colors">
+            <a href="https://wa.me/559984637356" target="_blank" rel="noopener noreferrer" className="w-full text-center py-4 rounded-xl font-bold text-white bg-[#00D084] hover:bg-[#00b370] transition-colors">
               Iniciar Conversa
             </a>
           </div>
@@ -104,7 +104,7 @@ export default function Negotiation() {
               <p className="text-sm text-[var(--color-cinza)]">Seg a Sex: 07h30 às 19h | Sáb: 07h30 às 13h</p>
             </div>
           </div>
-          
+
           <div className="hidden md:block w-px h-12 bg-[var(--color-linha-forte)]"></div>
 
           <div className="flex items-center gap-4">
@@ -123,7 +123,7 @@ export default function Negotiation() {
           <span className="eyebrow justify-center mb-4 text-[var(--color-amarelo)]">Processo Sem Mistérios</span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Como funciona o nosso acordo amigável?</h2>
           <p className="text-[var(--color-cinza)] mb-12 max-w-2xl mx-auto">Garantimos um caminho sem barreiras para manter o seu lar ou empresa conectados.</p>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
             <div className="relative">
               <div className="w-14 h-14 bg-[var(--color-roxo-900)] border border-[var(--color-linha-forte)] rounded-full flex items-center justify-center font-display font-bold text-[var(--color-amarelo)] text-xl mb-6">01</div>

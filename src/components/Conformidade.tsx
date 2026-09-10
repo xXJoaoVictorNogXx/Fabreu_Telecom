@@ -12,8 +12,8 @@ export default function Conformidade() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 max-[800px]:grid-cols-1">
-          <div className="border border-linha-forte rounded-2xl p-8 flex gap-6 max-[500px]:flex-col">
+        <div className="grid grid-cols-2 gap-6 max-[800px]:grid-cols-1 ">
+          <div className="border border-linha-forte rounded-2xl p-8 flex gap-6 max-[500px]:flex-col hover:scale-101 hover:shadow-2xl hover:shadow-roxo-500/50 hover:-translate-y-1 ">
             <div className="w-[80px] h-[80px] bg-roxo-800 rounded-xl flex items-center justify-center shrink-0">
               <span className="text-amarelo font-bold text-[0.8rem] tracking-wider">ANATEL</span>
             </div>
@@ -24,7 +24,7 @@ export default function Conformidade() {
             </div>
           </div>
 
-          <div className="border border-linha-forte rounded-2xl p-8 flex gap-6 max-[500px]:flex-col">
+          <div className="border border-linha-forte rounded-2xl p-8 flex gap-6 max-[500px]:flex-col hover:scale-101 hover:shadow-2xl hover:shadow-roxo-500/50 hover:-translate-y-1">
             <div className="w-[80px] h-[80px] bg-roxo-800 rounded-xl flex items-center justify-center shrink-0">
               <span className="text-amarelo font-bold text-[0.8rem] tracking-wider">RGC</span>
             </div>
@@ -35,7 +35,7 @@ export default function Conformidade() {
             </div>
           </div>
 
-          <div className="border border-linha-forte rounded-2xl p-8 flex gap-6 max-[500px]:flex-col">
+          <div className="border border-linha-forte rounded-2xl p-8 flex gap-6 max-[500px]:flex-col hover:scale-101 hover:shadow-2xl hover:shadow-roxo-500/50 hover:-translate-y-1 ">
             <div className="w-[80px] h-[80px] bg-roxo-800 rounded-xl flex items-center justify-center shrink-0">
               <span className="text-amarelo font-bold text-[0.8rem] tracking-wider">R-CIBER</span>
             </div>
@@ -46,7 +46,7 @@ export default function Conformidade() {
             </div>
           </div>
 
-          <div className="border border-linha-forte rounded-2xl p-8 flex gap-6 max-[500px]:flex-col">
+          <div className="border border-linha-forte rounded-2xl p-8 flex gap-6 max-[500px]:flex-col hover:scale-101 hover:shadow-2xl hover:shadow-roxo-500/50 hover:-translate-y-1 ">
             <div className="w-[80px] h-[80px] bg-roxo-800 rounded-xl flex items-center justify-center shrink-0 flex-col leading-none gap-1">
               <span className="text-amarelo font-bold text-[0.8rem] tracking-wider">LGPD</span>
               <span className="text-amarelo font-bold text-[0.8rem] tracking-wider">ANPD</span>
