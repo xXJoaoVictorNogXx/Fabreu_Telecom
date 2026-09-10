@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Rede() {
   return (
     <section className="rede bg-roxo-850 py-[84px] border-y border-linha max-[620px]:py-[60px]">
@@ -34,7 +36,7 @@ export default function Rede() {
           </ul>
         </div>
         <div className="img-rede rounded-raio overflow-hidden border border-linha shadow-[0_22px_44px_rgba(0,0,0,0.5)]">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800" alt="Servidor de rede" className="w-full h-auto block transform hover:scale-105 transition-transform duration-[10s]" loading="lazy"/>
+          <Image src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800" alt="Servidor de rede" width={800} height={500} className="w-full h-auto block transform hover:scale-105 transition-transform duration-[10s]" />
         </div>
       </div>
     </section>

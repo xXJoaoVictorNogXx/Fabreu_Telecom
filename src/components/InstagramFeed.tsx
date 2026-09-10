@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface InstagramMedia {
   id: string;
@@ -90,10 +91,11 @@ export default function InstagramFeed() {
                        playsInline 
                     />
                   ) : (
-                    <img 
+                    <Image 
                       src={post.media_url} 
                       alt={post.caption || 'Instagram Post'} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   )}
                   {/* Ícones para Vídeo ou Carrossel */}

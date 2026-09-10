@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Planos from "@/components/Planos";
+import Viabilidade from "@/components/Viabilidade";
 import Atalhos from "@/components/Atalhos";
 import Cobertura from "@/components/Cobertura";
 import Rede from "@/components/Rede";
@@ -14,6 +15,7 @@ export default function Home() {
     <main>
       <Hero />
       <Planos />
+      <Viabilidade />
       <Atalhos />
       <Cobertura />
       <Rede />

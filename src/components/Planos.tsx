@@ -1,12 +1,29 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
-const planosResidenciais = [
+type AppIncluso = {
+  name: string;
+  icon: string;
+};
+
+type Plano = {
+  mega: string;
+  perfil: string;
+  preco: string;
+  destaque: boolean;
+  beneficios: string[];
+  tag?: string;
+  apps?: AppIncluso[];
+};
+
+const planosResidenciais: Plano[] = [
   {
     mega: '1000 Mega',
     perfil: 'Ideal para streaming, redes sociais e home office básico.',
-    preco: '149,00',
+    preco: '149,90',
     destaque: false,
     beneficios: ['Dual Band (2.4G e 5G)',
       'Download 1000 Gbps',
@@ -16,7 +33,7 @@ const planosResidenciais = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 1'],
-    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Skeelo', icon: '/HBO_MAX.PNG' },{ name: 'Skeelo', icon: '/espn-logo-5.png' }, { name: 'Skeelo', icon: '/cnn.svg' },{ name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/premiere-logo.png' }],
+    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Skeelo', icon: '/HBO_MAX.PNG' }, { name: 'Skeelo', icon: '/espn-logo-5.png' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/premiere-logo.png' }],
   },
   {
     mega: '500',
@@ -32,7 +49,8 @@ const planosResidenciais = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 3'],
-apps: [{ name: 'Watch', icon: '/telecine.png ' }, { name: 'Skeelo', icon: '/HBO_MAX.PNG' },{ name: 'Skeelo', icon: '/Universal.png' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/Lionsgate.png' }],  },
+    apps: [{ name: 'Watch', icon: '/telecine.png' }, { name: 'Skeelo', icon: '/HBO_MAX.PNG' }, { name: 'Skeelo', icon: '/Universal.png' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/Lionsgate.png' }],
+  },
   {
     mega: '800',
     perfil: 'A experiência máxima. Tudo ao mesmo tempo, sem limites.',
@@ -46,11 +64,11 @@ apps: [{ name: 'Watch', icon: '/telecine.png ' }, { name: 'Skeelo', icon: '/HBO_
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 2'],
-    apps: [{ name: 'Watch', icon: '/GloboNews.webp' }, { name: 'Skeelo', icon: '/HBO_MAX.PNG' },{ name: 'Skeelo', icon: '/espn-logo-5.png' }, { name: 'Skeelo', icon: '/cnn.svg' },{ name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/sportv.png' }],
+    apps: [{ name: 'Watch', icon: '/GloboNews.webp' }, { name: 'Skeelo', icon: '/HBO_MAX.PNG' }, { name: 'Skeelo', icon: '/espn-logo-5.png' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/sportv.png' }],
   }
 ];
 
-const planosEmpresariais = [
+const planosEmpresariais: Plano[] = [
   {
     mega: '500',
     perfil: 'Para pequenos negócios, lojas e escritórios.',
@@ -158,15 +176,16 @@ export default function Planos() {
                     Aplicativos Inclusos
                   </p>
                   <div className="flex flex-wrap items-center justify-center gap-2">
-                    {plano.apps.map((appName, index) => (
+                    {plano.apps?.map((appName, index) => (
                       <div
                         key={index}
                         className="w-10 h-10 rounded-xl bg-white flex items-center justify-center p-1.5 shadow-sm border border-transparent hover:border-amarelo transition-colors"
                       >
-                        <img
+                        <Image
                           alt={`Logo do app ${appName.name}`}
                           className="w-full h-full object-contain"
-                          loading="lazy"
+                          width={40}
+                          height={40}
                           src={appName.icon}
                         />
                       </div>
@@ -176,9 +195,9 @@ export default function Planos() {
               )}
 
               <div className="mt-auto w-full">
-                <a href="#viabilidade" className={`btn w-full ${plano.destaque ? 'btn-primario' : 'btn-linha'}`}>
+                <Link href="#viabilidade" className={`btn w-full ${plano.destaque ? 'btn-primario' : 'btn-linha'}`}>
                   Assinar agora
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -190,18 +209,29 @@ export default function Planos() {
         {/* APPS GERAIS */}
         <div id="apps" className="mt-14">
           <div className="eyebrow mb-6">Diversão e segurança na palma da mão</div>
-          <div className="grid grid-cols-5 gap-4 mt-2 max-[980px]:grid-cols-3 max-[620px]:grid-cols-1">
+          <div className="grid grid-cols-3 gap-4 mt-2 max-[980px]:grid-cols-3 max-[620px]:grid-cols-1">
             {[
               { title: 'Watch Brasil', desc: 'Séries e filmes', icon: '/watch.png' },
-              { title: 'Skeelo', desc: 'Livros digitais', icon: '/skeelo.png' },
-              { title: 'Kaspersky', desc: 'Antivírus completo', icon: '/kaspersky.png' },
-              { title: 'Babbel', desc: 'Idiomas online', icon: '/babbel.png' },
               { title: 'Deezer', desc: 'Músicas e podcasts', icon: '/deezer.png' },
+              { title: 'ESPN', desc: 'Séries e filmes', icon: '/espn-logo-5.png' },
+              { title: 'CNN', desc: 'Músicas e podcasts', icon: '/cnn.svg' },
+              { title: 'HBOMax', desc: 'Séries e filmes', icon: '/HBO_MAX.PNG' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/getv.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/globoplay.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/paramount.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/premiere-logo.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/lev.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/fabreutv.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/sportv.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/universal.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/lionsgate.png' },
+
+
             ].map((app, i) => (
               <div key={i} className="border border-linha rounded-[14px] p-5 text-center bg-white/5 transition-all hover:border-amarelo hover:bg-amarelo/10">
                 <b className="font-display text-[1rem] block">{app.title}</b>
                 <span className="text-[0.78rem] text-cinza">{app.desc}</span>
-                <img src={app.icon} alt={app.title} className="flex justify-center items-center mx-auto w-full h-20 object-contain" />
+                <Image src={app.icon} alt={app.title} width={80} height={80} className="flex justify-center items-center mx-auto w-full h-20 object-contain" />
               </div>
             ))}
           </div>
