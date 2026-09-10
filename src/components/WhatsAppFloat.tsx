@@ -1,7 +1,7 @@
 export default function WhatsAppFloat() {
   return (
     <a 
-      href="https://api.whatsapp.com/send?phone=5599984227474&text=Ol%C3%A1!%20Quero%20assinar%20a%20Fabreu%20Telecom" 
+      href="https://api.whatsapp.com/send?phone=559984637356&text=Ol%C3%A1!%20Quero%20assinar%20a%20Fabreu%20Telecom" 
       target="_blank" 
       rel="noopener" 
       className="fixed bottom-[30px] right-[30px] w-14 h-14 bg-[#25D366] rounded-full grid place-items-center shadow-[0_12px_28px_rgba(37,211,102,0.4)] z-50 transition-transform duration-200 hover:-translate-y-1 max-[620px]:bottom-5 max-[620px]:right-5"
