@@ -6,6 +6,8 @@ import Rede from "@/components/Rede";
 import Empresas from "@/components/Empresas";
 import Conformidade from "@/components/Conformidade";
 import Faq from "@/components/Faq";
+import Negotiation from "@/components/Negotiation";
+import InstagramFeed from "@/components/InstagramFeed";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <Rede />
       <Empresas />
       <Conformidade />
+      <Negotiation />
+      <InstagramFeed />
       <Faq />
     </main>
   );
