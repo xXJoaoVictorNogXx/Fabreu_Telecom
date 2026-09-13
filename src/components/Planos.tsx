@@ -213,25 +213,27 @@ export default function Planos() {
             {[
               { title: 'Watch Brasil', desc: 'Séries e filmes', icon: '/watch.png' },
               { title: 'Deezer', desc: 'Músicas e podcasts', icon: '/deezer.png' },
-              { title: 'ESPN', desc: 'Séries e filmes', icon: '/espn-logo-5.png' },
+              { title: 'ESPN', desc: 'Séries e filmes', icon: '/ESPN.svg' },
               { title: 'CNN', desc: 'Músicas e podcasts', icon: '/cnn.svg' },
               { title: 'HBOMax', desc: 'Séries e filmes', icon: '/HBO_MAX.PNG' },
               { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/getv.png' },
               { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/globoplay.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/paramount.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/premiere-logo.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/Paramount.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/Premiere.png' },
               { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/lev.png' },
               { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/fabreutv.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/sportv.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/universal.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/lionsgate.png' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/SporTV.svg' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/Universal.svg' },
+              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/Lionsgate.svg' },
 
 
             ].map((app, i) => (
-              <div key={i} className="border border-linha rounded-[14px] p-5 text-center bg-white/5 transition-all hover:border-amarelo hover:bg-amarelo/10">
-                <b className="font-display text-[1rem] block">{app.title}</b>
-                <span className="text-[0.78rem] text-cinza">{app.desc}</span>
-                <Image src={app.icon} alt={app.title} width={80} height={80} className="flex justify-center items-center mx-auto w-full h-20 object-contain" />
+              <div key={i} className="border border-linha rounded-[14px] p-5 text-center bg-white/5 transition-all hover:border-amarelo hover:bg-amarelo/10 flex flex-col items-center">
+                <b className="font-display text-[1rem] block w-full">{app.title}</b>
+                <span className="text-[0.78rem] text-cinza block w-full mb-4">{app.desc}</span>
+                <div className="w-[90px] h-[90px] bg-white rounded-2xl flex justify-center items-center p-2.5 shadow-sm">
+                  <Image src={app.icon} alt={app.title} width={80} height={80} className="w-full h-full object-contain" />
+                </div>
               </div>
             ))}
           </div>
