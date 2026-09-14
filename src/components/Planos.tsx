@@ -212,19 +212,19 @@ export default function Planos() {
           <div className="grid grid-cols-3 gap-4 mt-2 max-[980px]:grid-cols-3 max-[620px]:grid-cols-1">
             {[
               { title: 'Watch Brasil', desc: 'Séries e filmes', icon: '/watch.png' },
-              { title: 'Deezer', desc: 'Músicas e podcasts', icon: '/deezer.png' },
-              { title: 'ESPN', desc: 'Séries e filmes', icon: '/ESPN.svg' },
-              { title: 'CNN', desc: 'Músicas e podcasts', icon: '/cnn.svg' },
-              { title: 'HBOMax', desc: 'Séries e filmes', icon: '/HBO_MAX.PNG' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/getv.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/globoplay.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/Paramount.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/Premiere.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/lev.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/fabreutv.png' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/SporTV.svg' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/Universal.svg' },
-              { title: 'HBOMax', desc: 'Músicas e podcasts', icon: '/Lionsgate.svg' },
+              { title: 'Deezer', desc: 'Streaming de músicas', icon: '/deezer.png' },
+              { title: 'ESPN', desc: 'Esportes em geral', icon: '/ESPN.svg' },
+              { title: 'CNN', desc: 'Canal de notícias', icon: '/cnn.svg' },
+              { title: 'HBOMax', desc: 'Streaming de filmes e séries', icon: '/HBO_Max.svg' },
+              { title: 'GeTV', desc: 'Esportes no YouTube', icon: '/getv.png' },
+              { title: 'Globoplay', desc: 'Streaming de filmes e séries', icon: '/Globoplay.svg' },
+              { title: 'Paramount', desc: 'Streaming de filmes e séries', icon: '/Paramount.svg' },
+              { title: 'Premiere', desc: 'Esportes em geral', icon: '/Premiere.png' },
+              { title: 'LevEduca', desc: 'Plataforma de aulas', icon: '/lev.png' },
+              { title: 'Fabreutv', desc: 'Streaming de filmes e séries', icon: '/fabreutv.png' },
+              { title: 'SporTV', desc: 'Esportes em geral', icon: '/SporTV.svg' },
+              { title: 'Universal', desc: 'Streaming de filmes e séries', icon: '/Universal.svg' },
+              { title: 'Lionsgate', desc: 'Streaming de filmes e séries', icon: '/Lionsgate.svg' },
 
 
             ].map((app, i) => (
