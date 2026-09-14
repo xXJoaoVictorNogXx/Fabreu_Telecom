@@ -33,7 +33,7 @@ const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 1'],
-    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Skeelo', icon: '/HBO_MAX.PNG' }, { name: 'Skeelo', icon: '/espn-logo-5.png' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/premiere-logo.png' }],
+    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/Premiere.png' }],
   },
   {
     mega: '500',
@@ -49,7 +49,7 @@ const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 3'],
-    apps: [{ name: 'Watch', icon: '/telecine.png' }, { name: 'Skeelo', icon: '/HBO_MAX.PNG' }, { name: 'Skeelo', icon: '/Universal.png' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/Lionsgate.png' }],
+    apps: [{ name: 'Watch', icon: '/telecine.png' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/Universal.svg' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/Lionsgate.svg' }],
   },
   {
     mega: '800',
@@ -64,7 +64,7 @@ const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 2'],
-    apps: [{ name: 'Watch', icon: '/GloboNews.webp' }, { name: 'Skeelo', icon: '/HBO_MAX.PNG' }, { name: 'Skeelo', icon: '/espn-logo-5.png' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/sportv.png' }],
+    apps: [{ name: 'Watch', icon: '/GloboNews.webp' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/SporTV,svg' }],
   }
 ];
 
@@ -212,7 +212,7 @@ export default function Planos() {
           <div className="grid grid-cols-3 gap-4 mt-2 max-[980px]:grid-cols-3 max-[620px]:grid-cols-1">
             {[
               { title: 'Watch Brasil', desc: 'Séries e filmes', icon: '/watch.png' },
-              { title: 'Deezer', desc: 'Streaming de músicas', icon: '/deezer.png' },
+              { title: 'Deezer', desc: 'Streaming de músicas', icon: '/Deezer.svg' },
               { title: 'ESPN', desc: 'Esportes em geral', icon: '/ESPN.svg' },
               { title: 'CNN', desc: 'Canal de notícias', icon: '/cnn.svg' },
               { title: 'HBOMax', desc: 'Streaming de filmes e séries', icon: '/HBO_Max.svg' },
