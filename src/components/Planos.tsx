@@ -64,7 +64,7 @@ const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 2'],
-    apps: [{ name: 'Watch', icon: '/GloboNews.webp' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/SporTV,svg' }],
+    apps: [{ name: 'Watch', icon: '/GloboNews.webp' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/SporTV.svg' }],
   }
 ];
 
