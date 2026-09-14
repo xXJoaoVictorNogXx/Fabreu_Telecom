@@ -84,7 +84,7 @@ export default function Footer() {
           <b className="font-display text-[0.8rem] text-amarelo tracking-widest uppercase block mb-4">Fale Conosco</b>
           <div className="flex flex-col gap-3">
             <p className="text-[0.9rem] text-[#DCD2EA]">Central: 0800 099-9800</p>
-            <p className="text-[0.9rem] text-[#DCD2EA]">Atendimento: (99) 98422-7474</p>
+            <p className="text-[0.9rem] text-[#DCD2EA]">Atendimento: (99) 98463-7356</p>
             <p className="text-[0.9rem] text-[#DCD2EA]">Matriz: (99) 98463-7356</p>
             <p className="text-[0.9rem] text-[#DCD2EA]">contato@fabreutelecom.net.br</p>
           </div>

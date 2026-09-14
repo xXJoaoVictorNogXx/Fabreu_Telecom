@@ -13,7 +13,7 @@ export default function Atalhos() {
             <span className="text-[0.85rem] text-cinza">Faturas, extrato e contratos.</span>
           </a>
 
-          <a href="https://api.whatsapp.com/send?phone=5599988229457&text=Quero%20segunda%20via%20do%20boleto" target="_blank" rel="noopener" className="flex flex-col gap-2 p-6 rounded-raio border border-linha-forte bg-white/5 transition-all duration-200 hover:-translate-y-1 hover:border-amarelo group">
+          <a href="https://api.whatsapp.com/send?phone=559984637356&text=Quero%20segunda%20via%20do%20boleto" target="_blank" rel="noopener" className="flex flex-col gap-2 p-6 rounded-raio border border-linha-forte bg-white/5 transition-all duration-200 hover:-translate-y-1 hover:border-amarelo group">
             <div className="w-[38px] h-[38px] rounded-[11px] bg-gradient-to-br from-magenta to-amarelo grid place-items-center mb-1">
               <svg viewBox="0 0 24 24" className="w-[19px] h-[19px] stroke-roxo-900 stroke-[2.2] fill-none" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>

@@ -113,7 +113,6 @@ export default function Planos() {
           <p className="text-cinza max-w-[42ch]">Todos os planos incluem roteador em comodato e instalação sujeita à viabilidade técnica.</p>
         </div>
 
-        {/* SWITCH DE CATEGORIA */}
         <div className="flex justify-center mb-12">
           <div className="bg-[#1A0128]/60 p-1.5 rounded-full inline-flex border border-linha-forte shadow-lg">
             <button
@@ -159,7 +158,6 @@ export default function Planos() {
                 <span className="text-[0.85rem] text-cinza font-normal font-corpo">/mês</span>
               </div>
 
-              {/* LISTA DE BENEFÍCIOS */}
               <ul className="list-none mt-[18px] mb-4 p-0 grid gap-2 text-[0.86rem] text-[#DDD3EB]">
                 {plano.beneficios.map((ben, j) => (
                   <li key={j} className="flex gap-2 items-start">
@@ -169,7 +167,6 @@ export default function Planos() {
                 ))}
               </ul>
 
-              {/* GRADE DE ÍCONES DE APPS */}
               {plano.apps && plano.apps.length > 0 && (
                 <div className="mb-6 w-full text-center border-t border-linha pt-4">
                   <p className="text-[10px] font-bold text-cinza uppercase tracking-widest mb-3">
@@ -206,7 +203,6 @@ export default function Planos() {
           * A velocidade anunciada de acesso e tráfego da internet é a nominal máxima, podendo sofrer variações decorrentes de fatores externos.
         </p>
 
-        {/* APPS GERAIS */}
         <div id="apps" className="mt-14">
           <div className="eyebrow mb-6">Diversão e segurança na palma da mão</div>
           <div className="grid grid-cols-3 gap-4 mt-2 max-[980px]:grid-cols-3 max-[620px]:grid-cols-1">

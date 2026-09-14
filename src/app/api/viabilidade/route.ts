@@ -78,7 +78,6 @@ export async function POST(request: Request) {
       </div>
     `;
 
-    // Envia o e-mail
     await transporter.sendMail({
       from: `"Viabilidade Fabreu Telecom" <${user}>`,
       to: emailTo,

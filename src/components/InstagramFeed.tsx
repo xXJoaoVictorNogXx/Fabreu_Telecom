@@ -98,7 +98,6 @@ export default function InstagramFeed() {
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   )}
-                  {/* Ícones para Vídeo ou Carrossel */}
                   {post.media_type === 'VIDEO' && (
                      <div className="absolute top-3 right-3 bg-black/50 p-1.5 rounded-full backdrop-blur-sm">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
