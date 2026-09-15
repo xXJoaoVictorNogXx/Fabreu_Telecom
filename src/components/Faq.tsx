@@ -17,7 +17,7 @@ const faqData = [
   },
   {
     q: 'Existe fidelidade?',
-    a: 'Sim, nossos planos possuem fidelidade padrão de 12 meses, que nos permite isentar a taxa de instalação e ceder o roteador gratuitamente.',
+    a: 'Sim, nossos planos possuem fidelidade padrão de 12 meses, que nos permite isentar a taxa de instalação e também temos um plano sem fidelidade.',
   },
 ];
 

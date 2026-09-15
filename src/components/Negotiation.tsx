@@ -95,7 +95,7 @@ export default function Negotiation() {
             </div>
             <div>
               <h4 className="font-bold text-white">Horário de Atendimento do Setor</h4>
-              <p className="text-sm text-[var(--color-cinza)]">Seg a Sex: 07h30 às 19h | Sáb: 07h30 às 13h</p>
+              <p className="text-sm text-[var(--color-cinza)]">Seg a Sex: 07h30 às 19h | Sáb: 07h30 às 12h</p>
             </div>
           </div>
 

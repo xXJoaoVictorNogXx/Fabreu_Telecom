@@ -10,6 +10,7 @@ import Conformidade from "@/components/Conformidade";
 import Faq from "@/components/Faq";
 import Negotiation from "@/components/Negotiation";
 import InstagramFeed from "@/components/InstagramFeed";
+import Infraestrutura from "@/components/Infraestrutura";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Conformidade />
       <Negotiation />
       <InstagramFeed />
+      <Infraestrutura />
       <Faq />
     </main>
   );

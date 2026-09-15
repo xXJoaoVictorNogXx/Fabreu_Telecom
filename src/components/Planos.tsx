@@ -202,7 +202,6 @@ export default function Planos() {
         </div>
         {categoria === 'empresarial' && (
           <div className="mt-14 max-w-5xl mx-auto w-full">
-            <Infraestrutura />
           </div>
         )}
         <p className="mt-[26px] text-[0.82rem] text-cinza max-w-[70ch] text-center mx-auto">

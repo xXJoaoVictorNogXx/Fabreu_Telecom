@@ -33,7 +33,7 @@ export default function Topbar() {
         </div>
         <div className="flex gap-[18px] items-center max-sm:hidden">
           <span>Central de atendimento <strong className="text-branco font-semibold">0800 099-9800</strong></span>
-          <a href="tel:5599984227474" className="hover:text-amarelo transition-colors">(99) 98422-7474</a>
+          <a href="tel:5599984227474" className="hover:text-amarelo transition-colors">(99) 98463-7356</a>
         </div>
       </div>
     </div>
