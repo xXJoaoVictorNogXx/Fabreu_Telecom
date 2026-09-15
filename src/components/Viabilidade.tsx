@@ -90,7 +90,6 @@ export default function Viabilidade() {
     <section id="viabilidade" className="relative py-[84px] max-[800px]:py-[60px] bg-roxo-900">
       <div className="wrap">
         <div className="grid grid-cols-2 gap-12 items-center max-[980px]:grid-cols-1">
-          {/* LADO ESQUERDO */}
           <div>
             <div className="eyebrow">Consulta de Viabilidade</div>
             <h2 className="text-[clamp(2.2rem,4vw,3.2rem)] mt-3.5 mb-6 leading-[1.1] text-white">
@@ -119,7 +118,6 @@ export default function Viabilidade() {
             </ul>
           </div>
 
-          {/* LADO DIREITO (FORM) */}
           <div className="bg-gradient-to-b from-[#2d0554] to-[#20033c] p-8 sm:p-10 rounded-[24px] border border-roxo-600/40 shadow-2xl">
             {status && (
               <div

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Infraestrutura from "./Infraestrutura";
 
 type AppIncluso = {
   name: string;
@@ -199,6 +200,11 @@ export default function Planos() {
             </div>
           ))}
         </div>
+        {categoria === 'empresarial' && (
+          <div className="mt-14 max-w-5xl mx-auto w-full">
+            <Infraestrutura />
+          </div>
+        )}
         <p className="mt-[26px] text-[0.82rem] text-cinza max-w-[70ch] text-center mx-auto">
           * A velocidade anunciada de acesso e tráfego da internet é a nominal máxima, podendo sofrer variações decorrentes de fatores externos.
         </p>

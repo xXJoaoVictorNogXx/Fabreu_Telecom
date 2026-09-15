@@ -20,6 +20,7 @@ export default function Cobertura() {
             { c: 'Alto Alegre do Maranhão', v: 'Expansão em andamento' },
             { c: 'Lago Verde', v: 'Viabilidade total' },
             { c: 'Conceição do Lago-Açu', v: 'Viabilidade parcial' },
+            { c: 'São José dos Basílios', v: 'Viabilidade parcial' },
           ].map((item, idx) => (
             <div key={idx} className="flex items-center gap-3.5 py-4 px-4 rounded-[14px] border border-linha bg-white/5">
               <div className="w-[10px] h-[10px] rounded-full bg-verde shadow-[0_0_0_5px_rgba(137,190,58,0.16)] flex-shrink-0"></div>

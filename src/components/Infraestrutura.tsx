@@ -23,7 +23,7 @@ export default function Infraestrutura() {
   ];
 
   return (
-    <section className="relative py-[84px] bg-[#1a0128] border-b border-roxo-600/20 overflow-hidden">
+    <section className="relative py-[84px]  border-b border-roxo-600/20 overflow-hidden">
       <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-magenta/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-amarelo/5 rounded-full blur-[120px] pointer-events-none" />
 

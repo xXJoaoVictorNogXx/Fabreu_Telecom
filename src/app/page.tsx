@@ -5,7 +5,6 @@ import Atalhos from "@/components/Atalhos";
 import BaixeApp from "@/components/BaixeApp";
 import Cobertura from "@/components/Cobertura";
 import Rede from "@/components/Rede";
-import Infraestrutura from "@/components/Infraestrutura";
 import Empresas from "@/components/Empresas";
 import Conformidade from "@/components/Conformidade";
 import Faq from "@/components/Faq";
@@ -22,7 +21,6 @@ export default function Home() {
       <BaixeApp />
       <Cobertura />
       <Rede />
-      <Infraestrutura />
       <Empresas />
       <Conformidade />
       <Negotiation />
