@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Planos from "@/components/Planos";
 import Viabilidade from "@/components/Viabilidade";
 import Atalhos from "@/components/Atalhos";
+import BaixeApp from "@/components/BaixeApp";
 import Cobertura from "@/components/Cobertura";
 import Rede from "@/components/Rede";
 import Infraestrutura from "@/components/Infraestrutura";
@@ -18,6 +19,7 @@ export default function Home() {
       <Planos />
       <Viabilidade />
       <Atalhos />
+      <BaixeApp />
       <Cobertura />
       <Rede />
       <Infraestrutura />
