@@ -218,14 +218,9 @@ export default function Planos() {
               { title: 'Deezer', desc: 'Streaming de músicas', icon: '/Deezer.svg' },
               { title: 'ESPN', desc: 'Esportes em geral', icon: '/ESPN.svg' },
               { title: 'HBOMax', desc: 'Streaming de filmes e séries', icon: '/HBO_Max.svg' },
-              { title: 'Globoplay', desc: 'Streaming de filmes e séries', icon: '/Globoplay.svg' },
-              { title: 'Paramount', desc: 'Streaming de filmes e séries', icon: '/Paramount.svg' },
               { title: 'Premiere', desc: 'Esportes em geral', icon: '/Premiere.png' },
-              { title: 'LevEduca', desc: 'Plataforma de aulas', icon: '/lev.png' },
               { title: 'Fabreutv', desc: 'Streaming de filmes e séries', icon: '/fabreutv.png' },
               { title: 'SporTV', desc: 'Esportes em geral', icon: '/SporTV.svg' },
-              { title: 'Universal', desc: 'Streaming de filmes e séries', icon: '/Universal.svg' },
-              { title: 'Lionsgate', desc: 'Streaming de filmes e séries', icon: '/Lionsgate.svg' },
 
 
             ].map((app, i) => (
