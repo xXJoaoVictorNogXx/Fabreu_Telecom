@@ -69,6 +69,9 @@ export default function Hero() {
       <div className="wrap relative z-10 grid grid-cols-[1.15fr_0.85fr] gap-14 items-center max-[980px]:grid-cols-1">
         <div>
           <div className="eyebrow">Fibra óptica de verdade</div>
+          <p className="font-display text-[1.3rem] font-bold mb-3">
+            Fabreu Telecom <span className="bg-gradient-to-r from-magenta to-amarelo bg-clip-text text-transparent">“A Melhor do Maranhão”</span>
+          </p>
           <h1 className="text-[clamp(2.5rem,5.4vw,4rem)] my-5 mb-[18px]">
             Sua internet não precisa ser <em className="not-italic text-amarelo">um problema</em>.
           </h1>
