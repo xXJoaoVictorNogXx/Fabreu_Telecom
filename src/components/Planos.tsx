@@ -35,7 +35,7 @@ const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 1'],
-    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/Premiere.png' }, { name: 'Skeelo', icon: '/SporTV.svg' }],
+    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/Premiere.png' }, { name: 'Skeelo', icon: '/SporTV.svg' }, { name: 'Skeelo', icon: '/lev.png' }],
   },
   {
     mega: '500',
@@ -51,7 +51,7 @@ const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 3'],
-    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }],
+    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/lev.png' }],
   },
   {
     mega: '800',
@@ -66,7 +66,7 @@ const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 2'],
-    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/Premiere.png' }, { name: 'Skeelo', icon: '/SporTV.svg' }],
+    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/Premiere.png' }, { name: 'Skeelo', icon: '/SporTV.svg' }, { name: 'Skeelo', icon: '/lev.png' }],
   }
 ];
 
@@ -221,7 +221,7 @@ export default function Planos() {
               { title: 'Premiere', desc: 'Esportes em geral', icon: '/Premiere.png' },
               { title: 'Fabreutv', desc: 'Streaming de filmes e séries', icon: '/fabreutv.png' },
               { title: 'SporTV', desc: 'Esportes em geral', icon: '/SporTV.svg' },
-
+              { title: 'SporTV', desc: 'Esportes em geral', icon: '/lev.png' },
 
             ].map((app, i) => (
               <div key={i} className="border border-linha rounded-[14px] p-5 text-center bg-white/5 transition-all hover:border-amarelo hover:bg-amarelo/10 flex flex-col items-center">

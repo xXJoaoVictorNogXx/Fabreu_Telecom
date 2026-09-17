@@ -80,7 +80,7 @@ export default function Negotiation() {
             <div className="w-14 h-14 bg-purple-50 text-[var(--color-roxo-600)] rounded-full flex items-center justify-center mb-6">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </div>
-            <h3 className="text-2xl font-bold mb-2">Central de Cobrança</h3>
+            <h3 className="text-2xl font-bold mb-2">Central de Ligações</h3>
             <p className="text-sm text-gray-600 mb-8 flex-1">Ligue gratuitamente para nossa central exclusiva de acordos de faturas.</p>
             <a href="tel:08000999800" className="w-full text-center py-4 rounded-xl font-bold text-[var(--color-roxo-900)] bg-[var(--color-amarelo)] hover:bg-[#e5a022] transition-colors">
               0800 099-9800
@@ -88,7 +88,7 @@ export default function Negotiation() {
           </div>
         </div>
 
-        <div className="bg-[var(--color-roxo-800)] border border-[var(--color-linha)] rounded-[32px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-12 shadow-xl">
+        <div className="bg-[var(--color-roxo-800)] border border-[var(--color-linha)] rounded-[32px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-center gap-6 mb-12 shadow-xl">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-[var(--color-roxo-900)] rounded-full flex items-center justify-center text-[var(--color-amarelo)] shrink-0">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -99,17 +99,7 @@ export default function Negotiation() {
             </div>
           </div>
 
-          <div className="hidden md:block w-px h-12 bg-[var(--color-linha-forte)]"></div>
 
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-[var(--color-roxo-900)] rounded-full flex items-center justify-center text-[var(--color-amarelo)] shrink-0">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </div>
-            <div>
-              <h4 className="font-bold text-white">Contato p/ Comprovantes</h4>
-              <p className="text-sm text-[var(--color-cinza)]">559984637356</p>
-            </div>
-          </div>
         </div>
 
         <div className="bg-[var(--color-roxo-850)] border border-[var(--color-linha-forte)] rounded-[32px] p-8 md:p-14 text-center shadow-2xl">

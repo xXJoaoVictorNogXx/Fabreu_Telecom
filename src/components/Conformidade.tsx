@@ -5,7 +5,7 @@ export default function Conformidade() {
         <div className="mb-12 flex gap-4 max-[800px]:flex-col">
           <div className="flex-1">
             <span className="text-amarelo font-bold tracking-[0.1em] uppercase text-[0.8rem] block mb-4 flex items-center gap-4 before:content-[''] before:block before:w-8 before:h-[2px] before:bg-roxo-500">CONFORMIDADE</span>
-            <h2 className="font-display text-[2.5rem] leading-[1.1] tracking-tight">Regulada, auditável e<br/>responsável pelos seus dados.</h2>
+            <h2 className="font-display text-[2.5rem] leading-[1.1] tracking-tight">Regulada, auditável e<br />responsável pelos seus dados.</h2>
           </div>
           <div className="flex-1 flex items-end pb-2">
             <p className="text-[#DCD2EA] text-[1rem] leading-relaxed max-w-[45ch]">Ser provedor de internet no Brasil é atividade regulada. Estas são as regras que seguimos e o que elas garantem na prática para quem assina.</p>
@@ -59,14 +59,13 @@ export default function Conformidade() {
           </div>
         </div>
 
-        <div className="mt-6 border border-linha-forte bg-roxo-900/50 rounded-2xl p-8 flex items-center justify-between gap-8 max-[900px]:flex-col max-[900px]:items-start">
+        <div className="mt-6 border border-linha-forte bg-roxo-900/50 rounded-2xl p-8 flex items-center justify-center gap-8 max-[900px]:flex-col max-[900px]:items-start">
+          <div className="w-[80px] h-[80px] bg-roxo-800 rounded-xl flex items-center justify-center shrink-0 flex-col leading-none gap-1">
+            <span className="text-amarelo font-bold text-[0.8rem] tracking-wider">DPO</span>
+          </div>
           <div className="flex-1">
             <h3 className="font-display text-[1.3rem] mb-2">Encarregado pelo tratamento de dados (DPO)</h3>
             <p className="text-[0.95rem] text-[#DCD2EA] leading-relaxed">Para solicitar acesso, correção, portabilidade ou exclusão dos seus dados, revogar consentimento ou relatar um incidente de segurança, fale direto com nosso encarregado.</p>
-          </div>
-          <div className="flex gap-4 max-[500px]:flex-col max-[500px]:w-full">
-            <a href="mailto:privacidade@fabreutelecom.net.br" className="bg-amarelo text-[#100019] font-bold px-6 py-4 rounded-full text-[0.95rem] hover:bg-white transition-colors max-[500px]:text-center">privacidade@fabreutelecom.net.br</a>
-            <a href="#" className="border border-linha-forte text-white font-bold px-6 py-4 rounded-full text-[0.95rem] hover:bg-white/5 transition-colors max-[500px]:text-center">Política de Privacidade</a>
           </div>
         </div>
       </div>
