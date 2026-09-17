@@ -59,15 +59,7 @@ export default function Conformidade() {
           </div>
         </div>
 
-        <div className="mt-6 border border-linha-forte bg-roxo-900/50 rounded-2xl p-8 flex items-center justify-center gap-8 max-[900px]:flex-col max-[900px]:items-start">
-          <div className="w-[80px] h-[80px] bg-roxo-800 rounded-xl flex items-center justify-center shrink-0 flex-col leading-none gap-1">
-            <span className="text-amarelo font-bold text-[0.8rem] tracking-wider">DPO</span>
-          </div>
-          <div className="flex-1">
-            <h3 className="font-display text-[1.3rem] mb-2">Encarregado pelo tratamento de dados (DPO)</h3>
-            <p className="text-[0.95rem] text-[#DCD2EA] leading-relaxed">Para solicitar acesso, correção, portabilidade ou exclusão dos seus dados, revogar consentimento ou relatar um incidente de segurança, fale direto com nosso encarregado.</p>
-          </div>
-        </div>
+
       </div>
     </section>
   );
