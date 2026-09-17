@@ -14,9 +14,6 @@ export default function Empresas() {
             Sua empresa não pode parar.
           </h2>
           <p className="text-cinza mb-8">Oferecemos soluções corporativas, link dedicado 100% garantido e IP fixo para empresas que necessitam de alta disponibilidade e SLAs agressivos.</p>
-          <div className="flex gap-[14px]">
-            <Link className="btn btn-linha" href="#falar-consultor">Falar com um consultor B2B</Link>
-          </div>
         </div>
       </div>
     </section>

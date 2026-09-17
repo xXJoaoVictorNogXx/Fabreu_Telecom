@@ -22,7 +22,6 @@ export default function Home() {
       <BaixeApp />
       <Cobertura />
       <Rede />
-      <Empresas />
       <Conformidade />
       <Negotiation />
       <InstagramFeed />

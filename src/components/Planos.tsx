@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Infraestrutura from "./Infraestrutura";
+import Empresas from "./Empresas";
 
 type AppIncluso = {
   name: string;
@@ -70,7 +71,7 @@ const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 1'],
-    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/Premiere.png' }],
+    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/Premiere.png' }, { name: 'Skeelo', icon: '/SporTV.svg' }, { name: 'Skeelo', icon: '/lev.png' }],
   },
   {
     mega: '500',
@@ -86,7 +87,7 @@ const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 3'],
-    apps: [{ name: 'Watch', icon: '/telecine.png' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/Universal.svg' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/Lionsgate.svg' }],
+    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/lev.png' }],
   },
   {
     mega: '800',
@@ -101,7 +102,7 @@ const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 2'],
-    apps: [{ name: 'Watch', icon: '/GloboNews.webp' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/cnn.svg' }, { name: 'Skeelo', icon: '/getv.png' }, { name: 'Skeelo', icon: '/SporTV.svg' }],
+    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/Premiere.png' }, { name: 'Skeelo', icon: '/SporTV.svg' }, { name: 'Skeelo', icon: '/lev.png' }],
   }
 ];
 
@@ -242,6 +243,7 @@ export default function Planos() {
         </div>
         {categoria === 'empresarial' && (
           <div className="mt-14 max-w-5xl mx-auto w-full">
+            <Empresas />
           </div>
         )}
         <p className="mt-[26px] text-[0.82rem] text-cinza max-w-[70ch] text-center mx-auto">
@@ -286,4 +288,4 @@ export default function Planos() {
       </div>
     </section>
   );
-}
+}
