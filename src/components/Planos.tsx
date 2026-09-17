@@ -20,6 +20,42 @@ type Plano = {
   apps?: AppIncluso[];
 };
 
+type CategoriaApp = 'todos' | 'esporte' | 'entretenimento' | 'jornalismo' | 'kids';
+
+type AppCanal = {
+  title: string;
+  desc: string;
+  icon: string;
+  categoria: 'esporte' | 'entretenimento' | 'jornalismo' | 'kids';
+};
+
+const appsDisponiveis: AppCanal[] = [
+  { title: 'Watch Brasil', desc: 'Séries e filmes', icon: '/watch.png', categoria: 'entretenimento' },
+  { title: 'Deezer', desc: 'Streaming de músicas', icon: '/Deezer.svg', categoria: 'entretenimento' },
+  { title: 'ESPN', desc: 'Esportes em geral', icon: '/ESPN.svg', categoria: 'esporte' },
+  { title: 'CNN', desc: 'Canal de notícias', icon: '/cnn.svg', categoria: 'jornalismo' },
+  { title: 'GloboNews', desc: 'Jornalismo 24 horas', icon: '/GloboNews.webp', categoria: 'jornalismo' },
+  { title: 'HBOMax', desc: 'Streaming de filmes e séries', icon: '/HBO_Max.svg', categoria: 'entretenimento' },
+  { title: 'GeTV', desc: 'Esportes no YouTube', icon: '/getv.png', categoria: 'esporte' },
+  { title: 'Globoplay', desc: 'Streaming de filmes e séries', icon: '/Globoplay.svg', categoria: 'entretenimento' },
+  { title: 'Paramount', desc: 'Streaming de filmes e séries', icon: '/Paramount.svg', categoria: 'entretenimento' },
+  { title: 'Premiere', desc: 'Esportes em geral', icon: '/Premiere.png', categoria: 'esporte' },
+  { title: 'LevEduca', desc: 'Plataforma educativa e aulas', icon: '/lev.png', categoria: 'kids' },
+  { title: 'Fabreutv', desc: 'Streaming de filmes e séries', icon: '/fabreutv.png', categoria: 'entretenimento' },
+  { title: 'SporTV', desc: 'Esportes em geral', icon: '/SporTV.svg', categoria: 'esporte' },
+  { title: 'Universal', desc: 'Streaming de filmes e séries', icon: '/Universal.svg', categoria: 'entretenimento' },
+  { title: 'Lionsgate', desc: 'Streaming de filmes e séries', icon: '/Lionsgate.svg', categoria: 'entretenimento' },
+  { title: 'Telecine', desc: 'Filmes e cinema', icon: '/telecine.png', categoria: 'entretenimento' },
+];
+
+const categoriasSwitch: { id: CategoriaApp; label: string }[] = [
+  { id: 'todos', label: 'Todos' },
+  { id: 'esporte', label: 'Esporte' },
+  { id: 'entretenimento', label: 'Entretenimento / Filmes / Música' },
+  { id: 'jornalismo', label: 'Jornalismo' },
+  { id: 'kids', label: 'Kids' },
+];
+
 const planosResidenciais: Plano[] = [
   {
     mega: '1000 Mega',
@@ -96,8 +132,12 @@ const planosEmpresariais: Plano[] = [
 
 export default function Planos() {
   const [categoria, setCategoria] = useState<'residencial' | 'empresarial'>('residencial');
+  const [categoriaApp, setCategoriaApp] = useState<CategoriaApp>('todos');
 
   const planosAtuais = categoria === 'residencial' ? planosResidenciais : planosEmpresariais;
+  const appsFiltrados = categoriaApp === 'todos'
+    ? appsDisponiveis
+    : appsDisponiveis.filter((app) => app.categoria === categoriaApp);
 
   return (
     <section id="planos" className="relative py-[84px] bg-roxo-850 border-y border-linha max-[620px]:py-[60px]">
@@ -208,27 +248,31 @@ export default function Planos() {
           * A velocidade anunciada de acesso e tráfego da internet é a nominal máxima, podendo sofrer variações decorrentes de fatores externos.
         </p>
 
-        <div id="apps" className="mt-14">
-          <div className="eyebrow mb-6">Diversão e segurança na palma da mão</div>
+        <div id="apps" className="mt-16 border-t border-linha/50 pt-12">
+          <div className="eyebrow mb-2 text-center">Diversão e segurança na palma da mão</div>
+          <h3 className="text-center font-display text-2xl font-bold mb-6 text-white">
+            Canais e Aplicativos Inclusos
+          </h3>
+
+          <div className="flex justify-center mb-8">
+            <div className="bg-[#1A0128]/60 p-1.5 rounded-full inline-flex border border-linha-forte shadow-lg flex-wrap justify-center max-[620px]:rounded-2xl gap-1">
+              {categoriasSwitch.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setCategoriaApp(cat.id)}
+                  className={`py-2 px-5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 ${categoriaApp === cat.id
+                    ? 'bg-amarelo text-[#1A0128] shadow-md'
+                    : 'text-cinza hover:text-white'
+                    }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-3 gap-4 mt-2 max-[980px]:grid-cols-3 max-[620px]:grid-cols-1">
-            {[
-              { title: 'Watch Brasil', desc: 'Séries e filmes', icon: '/watch.png' },
-              { title: 'Deezer', desc: 'Streaming de músicas', icon: '/Deezer.svg' },
-              { title: 'ESPN', desc: 'Esportes em geral', icon: '/ESPN.svg' },
-              { title: 'CNN', desc: 'Canal de notícias', icon: '/cnn.svg' },
-              { title: 'HBOMax', desc: 'Streaming de filmes e séries', icon: '/HBO_Max.svg' },
-              { title: 'GeTV', desc: 'Esportes no YouTube', icon: '/getv.png' },
-              { title: 'Globoplay', desc: 'Streaming de filmes e séries', icon: '/Globoplay.svg' },
-              { title: 'Paramount', desc: 'Streaming de filmes e séries', icon: '/Paramount.svg' },
-              { title: 'Premiere', desc: 'Esportes em geral', icon: '/Premiere.png' },
-              { title: 'LevEduca', desc: 'Plataforma de aulas', icon: '/lev.png' },
-              { title: 'Fabreutv', desc: 'Streaming de filmes e séries', icon: '/fabreutv.png' },
-              { title: 'SporTV', desc: 'Esportes em geral', icon: '/SporTV.svg' },
-              { title: 'Universal', desc: 'Streaming de filmes e séries', icon: '/Universal.svg' },
-              { title: 'Lionsgate', desc: 'Streaming de filmes e séries', icon: '/Lionsgate.svg' },
-
-
-            ].map((app, i) => (
+            {appsFiltrados.map((app, i) => (
               <div key={i} className="border border-linha rounded-[14px] p-5 text-center bg-white/5 transition-all hover:border-amarelo hover:bg-amarelo/10 flex flex-col items-center">
                 <b className="font-display text-[1rem] block w-full">{app.title}</b>
                 <span className="text-[0.78rem] text-cinza block w-full mb-4">{app.desc}</span>
@@ -242,4 +286,4 @@ export default function Planos() {
       </div>
     </section>
   );
-}
+}
