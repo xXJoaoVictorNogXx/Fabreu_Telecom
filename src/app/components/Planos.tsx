@@ -5,131 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Infraestrutura from "./Infraestrutura";
 import Empresas from "./Empresas";
+import { CategoriaApp } from "@/app/types/appsTypes";
+import { appsDisponiveis, categoriasSwitch } from "@/app/constants/apps";
+import { planosResidenciais, planosEmpresariais } from "@/app/constants/planos";
 
-type AppIncluso = {
-  name: string;
-  icon: string;
-};
 
-type Plano = {
-  mega: string;
-  perfil: string;
-  preco: string;
-  destaque: boolean;
-  beneficios: string[];
-  tag?: string;
-  apps?: AppIncluso[];
-};
 
-type CategoriaApp = 'todos' | 'esporte' | 'entretenimento' | 'jornalismo' | 'kids';
-
-type AppCanal = {
-  title: string;
-  desc: string;
-  icon: string;
-  categoria: 'esporte' | 'entretenimento' | 'jornalismo' | 'kids';
-};
-
-const appsDisponiveis: AppCanal[] = [
-  { title: 'Watch Brasil', desc: 'Séries e filmes', icon: '/watch.png', categoria: 'entretenimento' },
-  { title: 'Deezer', desc: 'Streaming de músicas', icon: '/Deezer.svg', categoria: 'entretenimento' },
-  { title: 'ESPN', desc: 'Esportes em geral', icon: '/ESPN.svg', categoria: 'esporte' },
-  { title: 'CNN', desc: 'Canal de notícias', icon: '/cnn.svg', categoria: 'jornalismo' },
-  { title: 'GloboNews', desc: 'Jornalismo 24 horas', icon: '/GloboNews.webp', categoria: 'jornalismo' },
-  { title: 'HBOMax', desc: 'Streaming de filmes e séries', icon: '/HBO_Max.svg', categoria: 'entretenimento' },
-  { title: 'GeTV', desc: 'Esportes no YouTube', icon: '/getv.png', categoria: 'esporte' },
-  { title: 'Globoplay', desc: 'Streaming de filmes e séries', icon: '/Globoplay.svg', categoria: 'entretenimento' },
-  { title: 'Paramount', desc: 'Streaming de filmes e séries', icon: '/Paramount.svg', categoria: 'entretenimento' },
-  { title: 'Premiere', desc: 'Esportes em geral', icon: '/Premiere.png', categoria: 'esporte' },
-  { title: 'LevEduca', desc: 'Plataforma educativa e aulas', icon: '/lev.png', categoria: 'kids' },
-  { title: 'Fabreutv', desc: 'Streaming de filmes e séries', icon: '/fabreutv.png', categoria: 'entretenimento' },
-  { title: 'SporTV', desc: 'Esportes em geral', icon: '/SporTV.svg', categoria: 'esporte' },
-  { title: 'Universal', desc: 'Streaming de filmes e séries', icon: '/Universal.svg', categoria: 'entretenimento' },
-  { title: 'Lionsgate', desc: 'Streaming de filmes e séries', icon: '/Lionsgate.svg', categoria: 'entretenimento' },
-  { title: 'Telecine', desc: 'Filmes e cinema', icon: '/telecine.png', categoria: 'entretenimento' },
-];
-
-const categoriasSwitch: { id: CategoriaApp; label: string }[] = [
-  { id: 'todos', label: 'Todos' },
-  { id: 'esporte', label: 'Esporte' },
-  { id: 'entretenimento', label: 'Entretenimento / Filmes / Música' },
-  { id: 'jornalismo', label: 'Jornalismo' },
-  { id: 'kids', label: 'Kids' },
-];
-
-const planosResidenciais: Plano[] = [
-  {
-    mega: '1000 Mega',
-    perfil: 'Ideal para streaming, redes sociais e home office básico.',
-    preco: '149,90',
-    destaque: false,
-    beneficios: ['Dual Band (2.4G e 5G)',
-      'Download 1000 Gbps',
-      'Upload 500 Mbps',
-      'Internet Ilimitada',
-      'Instalação Grátis',
-      'Wi-Fi 6 Grátis',
-      'Atendimento Premium',
-      'Suporte Nível 1'],
-    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/Premiere.png' }, { name: 'Skeelo', icon: '/SporTV.svg' }, { name: 'Skeelo', icon: '/lev.png' }],
-  },
-  {
-    mega: '500',
-    perfil: 'Perfeito para famílias, vários dispositivos e jogos online.',
-    preco: '95,00',
-    destaque: true,
-    tag: 'Mais vendido',
-    beneficios: ['Dual Band (2.4G e 5G)',
-      'Download 500 Gbps',
-      'Upload 250 Mbps',
-      'Internet Ilimitada',
-      'Instalação Grátis',
-      'Wi-Fi 6 Grátis',
-      'Atendimento Premium',
-      'Suporte Nível 3'],
-    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/lev.png' }],
-  },
-  {
-    mega: '800',
-    perfil: 'A experiência máxima. Tudo ao mesmo tempo, sem limites.',
-    preco: '125,00',
-    destaque: false,
-    beneficios: ['Dual Band (2.4G e 5G)',
-      'Download 800 Gbps',
-      'Upload 400 Mbps',
-      'Internet Ilimitada',
-      'Instalação Grátis',
-      'Wi-Fi 6 Grátis',
-      'Atendimento Premium',
-      'Suporte Nível 2'],
-    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/HBO_Max.svg' }, { name: 'Skeelo', icon: '/ESPN.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/Premiere.png' }, { name: 'Skeelo', icon: '/SporTV.svg' }, { name: 'Skeelo', icon: '/lev.png' }],
-  }
-];
-
-const planosEmpresariais: Plano[] = [
-  {
-    mega: '500',
-    perfil: 'Para pequenos negócios, lojas e escritórios.',
-    preco: '119,90',
-    destaque: false,
-    beneficios: ['Wi-Fi 6 incluso', 'Banda simétrica', 'Suporte PJ em até 4h'],
-  },
-  {
-    mega: '800',
-    perfil: 'Alta demanda, transferência de grandes arquivos e sistemas em nuvem.',
-    preco: '189,90',
-    destaque: true,
-    tag: 'Recomendado PJ',
-    beneficios: ['IP Fixo Opcional', 'Banda simétrica', 'SLA Garantido'],
-  },
-  {
-    mega: '1000',
-    perfil: 'Conexão máxima para empresas robustas e servidores locais.',
-    preco: '299,90',
-    destaque: false,
-    beneficios: ['IP Fixo Incluso', 'Rotas redundantes', 'Gerente de contas'],
-  }
-];
 
 export default function Planos() {
   const [categoria, setCategoria] = useState<'residencial' | 'empresarial'>('residencial');
@@ -138,7 +19,7 @@ export default function Planos() {
   const planosAtuais = categoria === 'residencial' ? planosResidenciais : planosEmpresariais;
   const appsFiltrados = categoriaApp === 'todos'
     ? appsDisponiveis
-    : appsDisponiveis.filter((app) => app.categoria === categoriaApp);
+    : appsDisponiveis.filter((app) => app.categoria === categoriaApp);  
 
   return (
     <section id="planos" className="relative py-[84px] bg-roxo-850 border-y border-linha max-[620px]:py-[60px]">
@@ -273,7 +154,7 @@ export default function Planos() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 mt-2 max-[980px]:grid-cols-3 max-[620px]:grid-cols-1">
+          <div className="grid grid-cols-5 gap-4 mt-2 max-[980px]:grid-cols-3 max-[620px]:grid-cols-1">
             {appsFiltrados.map((app, i) => (
               <div key={i} className="border border-linha rounded-[14px] p-5 text-center bg-white/5 transition-all hover:border-amarelo hover:bg-amarelo/10 flex flex-col items-center">
                 <b className="font-display text-[1rem] block w-full">{app.title}</b>

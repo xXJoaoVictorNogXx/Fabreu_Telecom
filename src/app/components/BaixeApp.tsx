@@ -1,14 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-
-interface BaixeAppProps {
-  leftImage?: string;
-  centerImage?: string;
-  rightImage?: string;
-  googlePlayUrl?: string;
-  appStoreUrl?: string;
-}
+import { BaixeAppProps } from "../types/appFabreuTypes";
 
 export default function BaixeApp({
   leftImage = "/appff.png",

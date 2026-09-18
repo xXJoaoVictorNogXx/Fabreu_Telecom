@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import { enviarConsultaViabilidade } from '../services/viabilidadeService';
 
 export default function Viabilidade() {
   const [formData, setFormData] = useState({
@@ -45,23 +46,13 @@ export default function Viabilidade() {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/viabilidade', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
 
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || 'Erro ao enviar consulta.');
-      }
+      await enviarConsultaViabilidade(formData);
 
       setStatus({
         type: 'success',
         message: 'Solicitação enviada com sucesso! Nossa equipe entrará em contato em breve.',
       });
-
       // Limpa o formulário após envio bem sucedido
       setFormData({
         nome: '',

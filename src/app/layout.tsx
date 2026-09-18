@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import Topbar from "@/components/Topbar";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
+import Topbar from "@/app/components/Topbar";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+import WhatsAppFloat from "@/app/components/WhatsAppFloat";
 
 const inter = Inter({
   variable: "--font-inter",

@@ -1,48 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { planosEmpresariaisHome, planosResidenciaisHome } from "../constants/planos";
 
-const planosResidenciais = [
-  {
-    mega: '500',
-    percent: 50,
-    beneficios: ['Download até 500 Mbps', 'Ping otimizado para jogos'],
-  },
-  {
-    mega: '800',
-    percent: 80,
-    beneficios: ['Download até 800 Mbps', 'Ping otimizado para jogos'],
-  },
-  {
-    mega: '1000',
-    percent: 100,
-    beneficios: ['Download até 1000 Mbps', 'Wi-Fi 6 de última geração'],
-  }
-];
-
-const planosEmpresariais = [
-  {
-    mega: '500',
-    percent: 50,
-    beneficios: ['Banda simétrica', 'Suporte PJ em até 4h'],
-  },
-  {
-    mega: '800',
-    percent: 80,
-    beneficios: ['Banda simétrica', 'SLA Garantido'],
-  },
-  {
-    mega: '1000',
-    percent: 100,
-    beneficios: ['Rotas redundantes', 'Gerente de contas exclusivo'],
-  }
-];
 
 export default function Hero() {
   const [categoria, setCategoria] = useState<'residencial' | 'empresarial'>('residencial');
   const [selectedIndex, setSelectedIndex] = useState(1); // Default to middle plan
 
-  const planosAtuais = categoria === 'residencial' ? planosResidenciais : planosEmpresariais;
+  const planosAtuais = categoria === 'residencial' ? planosResidenciaisHome : planosEmpresariaisHome;
   const planoSelecionado = planosAtuais[selectedIndex];
 
   const strokeDashoffset = 251 - (planoSelecionado.percent / 100) * 251;

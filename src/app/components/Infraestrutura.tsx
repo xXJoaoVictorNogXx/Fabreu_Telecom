@@ -1,26 +1,8 @@
 "use client";
 
+import { infraestruturaCards } from "../constants/infraestrutura";
+
 export default function Infraestrutura() {
-  const cards = [
-    {
-      highlight: "AS269260",
-      title: "Sistema autônomo próprio",
-      description:
-        "Saída direta para a internet com múltiplos trânsitos e peering, sem depender da rede de terceiros para chegar aos grandes provedores de conteúdo.",
-    },
-    {
-      highlight: "IPv6",
-      title: "Pronta para o futuro",
-      description:
-        "Rede dual-stack com IPv4 e IPv6 nativo, garantindo compatibilidade com jogos, consoles e serviços que já exigem o novo protocolo.",
-    },
-    {
-      highlight: "24×7",
-      title: "Monitoramento contínuo",
-      description:
-        "Enlaces, PoPs e caixas de atendimento acompanhados o tempo todo, com equipes de campo acionadas antes que o cliente precise ligar.",
-    },
-  ];
 
   return (
     <section className="relative py-[84px]  border-b border-roxo-600/20 overflow-hidden">
@@ -43,7 +25,7 @@ export default function Infraestrutura() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {cards.map((card, index) => (
+          {infraestruturaCards.map((card, index) => (
             <div
               key={index}
               className="group relative bg-[#230438]/80 backdrop-blur-md border border-roxo-600/30 p-8 rounded-[24px] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-amarelo/50 hover:bg-[#2e054a] hover:shadow-[0_20px_40px_-15px_rgba(250,204,21,0.15),0_0_20px_rgba(255,0,127,0.1)]"

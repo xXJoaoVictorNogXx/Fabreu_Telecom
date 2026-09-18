@@ -1,0 +1,42 @@
+import { AppCanal, CategoriaApp } from "@/app/types/appsTypes";
+
+export const appsDisponiveis: AppCanal[] = [
+  { title: 'Watch Brasil', desc: 'Séries e filmes', icon: '/watch.png', categoria: 'entretenimento' },
+  { title: 'Deezer', desc: 'Streaming de músicas', icon: '/Deezer.svg', categoria: 'entretenimento' },
+  { title: 'ESPN', desc: 'Esportes em geral', icon: '/ESPN.svg', categoria: 'esporte' },
+  { title: 'CNN', desc: 'Canal de notícias', icon: '/cnn.svg', categoria: 'jornalismo' },
+  { title: 'GloboNews', desc: 'Jornalismo 24 horas', icon: '/GloboNews.webp', categoria: 'jornalismo' },
+  { title: 'HBOMax', desc: 'Streaming de filmes e séries', icon: '/HBO_Max.svg', categoria: 'entretenimento' },
+  { title: 'GeTV', desc: 'Esportes no YouTube', icon: '/getv.png', categoria: 'esporte' },
+  { title: 'Globoplay', desc: 'Streaming de filmes e séries', icon: '/Globoplay.svg', categoria: 'entretenimento' },
+  { title: 'Paramount', desc: 'Streaming de filmes e séries', icon: '/Paramount.svg', categoria: 'entretenimento' },
+  { title: 'Premiere', desc: 'Esportes em geral', icon: '/Premiere.png', categoria: 'esporte' },
+  { title: 'LevEduca', desc: 'Plataforma educativa e aulas', icon: '/lev.png', categoria: 'kids' },
+  { title: 'Fabreutv', desc: 'Streaming de filmes e séries', icon: '/fabreutv.png', categoria: 'entretenimento' },
+  { title: 'SporTV', desc: 'Esportes em geral', icon: '/SporTV.svg', categoria: 'esporte' },
+  { title: 'Universal', desc: 'Streaming de filmes e séries', icon: '/Universal.svg', categoria: 'entretenimento' },
+  { title: 'Lionsgate', desc: 'Streaming de filmes e séries', icon: '/Lionsgate.svg', categoria: 'entretenimento' },
+  { title: 'Discovery Kids', desc: 'Desenhos e programas infantis', icon: '/Discovery_Kids.svg', categoria: 'kids' },
+  { title: 'Telecine', desc: 'Filmes e cinema', icon: '/telecine.png', categoria: 'entretenimento' },
+  { title: 'TV Globo', desc: 'Jornalismo, entretenimento e esporte', icon: '/Tv_Globo.png', categoria: 'canais abertos' },
+  { title: 'SBT', desc: 'Variedades e entretenimento', icon: '/SBT.png', categoria: 'canais abertos' },
+  { title: 'Record', desc: 'Jornalismo e entretenimento', icon: '/Record.webp', categoria: 'canais abertos' },
+  { title: 'RedeTV!', desc: 'Variedades e entretenimento', icon: '/RedeTV.jpg', categoria: 'canais abertos' },
+  { title: 'Band', desc: 'Jornalismo e esporte', icon: '/Band.svg', categoria: 'canais abertos' },
+  { title: 'Rede Vida', desc: 'Conteúdo religioso e variedades', icon: '/Rede_Vida.png', categoria: 'canais abertos' },
+  { title: 'Canção Nova', desc: 'Conteúdo religioso e transmissões', icon: '/cancao-nova.png', categoria: 'canais abertos' },
+  { title: 'GNT', desc: 'Estilo de vida e variedades', icon: '/GNT.svg', categoria: 'entretenimento' },
+  { title: 'Megapix', desc: 'Filmes e sucessos do cinema', icon: '/Megapix.svg', categoria: 'entretenimento' },
+  { title: 'TNT', desc: 'Filmes, séries e eventos', icon: '/TNT.svg', categoria: 'entretenimento' },
+  { title: 'Multishow', desc: 'Humor, música e entretenimento', icon: '/Multishow.png', categoria: 'entretenimento' },
+  { title: 'Cartoon Network', desc: 'Desenhos e programas infantis', icon: '/cartoon-network.png', categoria: 'kids' },
+];
+
+export const categoriasSwitch: { id: CategoriaApp; label: string }[] = [
+  { id: 'todos', label: 'Todos' },
+  { id: 'canais abertos', label: 'Canais abertos' },
+  { id: 'esporte', label: 'Esporte' },
+  { id: 'entretenimento', label: 'Entretenimento / Filmes / Música' },
+  { id: 'jornalismo', label: 'Jornalismo' },
+  { id: 'kids', label: 'Kids' },
+];

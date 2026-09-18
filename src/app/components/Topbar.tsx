@@ -1,14 +1,9 @@
 'use client';
 
+import { cidades } from '@/app/constants/cidades';
 import { useState } from 'react';
 
-const cidades = {
-  'presidente-dutra': 'Presidente Dutra',
-  'bacabal': 'Bacabal',
-  'alto-alegre': 'Alto Alegre do Maranhão',
-  'lago-verde': 'Lago Verde',
-  'conceicao': 'Conceição do Lago-Açu',
-};
+
 
 export default function Topbar() {
   const [cidade, setCidade] = useState('presidente-dutra');
