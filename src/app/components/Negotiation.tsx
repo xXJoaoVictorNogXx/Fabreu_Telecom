@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Negotiation() {
   return (
-    <section className="relative py-24 bg-[var(--color-roxo-900)] border-t border-[var(--color-linha)]">
+    <section id="negocios" className="relative py-24 bg-[var(--color-roxo-900)] border-t border-[var(--color-linha)]">
       <div className="wrap relative z-10">
 
         <div className="bg-gradient-to-br from-[var(--color-roxo-800)] to-[var(--color-roxo-900)] rounded-[32px] p-8 md:p-14 border border-[var(--color-linha)] mb-8 shadow-2xl">

@@ -56,7 +56,10 @@ export default function Header() {
           <a href="#planos" className="menu-link text-[0.94rem] font-medium text-[#E6DDF2] max-[980px]:w-full max-[980px]:py-3 max-[980px]:border-b max-[980px]:border-linha">Planos</a>
           <a href="#apps" className="menu-link text-[0.94rem] font-medium text-[#E6DDF2] max-[980px]:w-full max-[980px]:py-3 max-[980px]:border-b max-[980px]:border-linha">Apps inclusos</a>
           <a href="#cobertura" className="menu-link text-[0.94rem] font-medium text-[#E6DDF2] max-[980px]:w-full max-[980px]:py-3 max-[980px]:border-b max-[980px]:border-linha">Cobertura</a>
-          <a href="#empresas" className="menu-link text-[0.94rem] font-medium text-[#E6DDF2] max-[980px]:w-full max-[980px]:py-3 max-[980px]:border-b max-[980px]:border-linha">Empresas</a>
+          <a href="#sobre" className="menu-link text-[0.94rem] font-medium text-[#E6DDF2] max-[980px]:w-full max-[980px]:py-3 max-[980px]:border-b max-[980px]:border-linha">Sobre Nós</a>
+          <a href="#negocios" className="menu-link text-[0.94rem] font-medium text-[#E6DDF2] max-[980px]:w-full max-[980px]:py-3 max-[980px]:border-b max-[980px]:border-linha">Negociação</a>
+          <a href="#blog" className="menu-link text-[0.94rem] font-medium text-[#E6DDF2] max-[980px]:w-full max-[980px]:py-3 max-[980px]:border-b max-[980px]:border-linha">Blog</a>
+          <a href="#fabreuapp" className="menu-link text-[0.94rem] font-medium text-[#E6DDF2] max-[980px]:w-full max-[980px]:py-3 max-[980px]:border-b max-[980px]:border-linha">Fabreu App</a>
         </nav>
         <button
           className="menu-btn hidden max-[980px]:block max-[980px]:ml-auto max-[980px]:order-2 bg-transparent border border-linha-forte rounded-[10px] py-[9px] px-[11px] cursor-pointer"

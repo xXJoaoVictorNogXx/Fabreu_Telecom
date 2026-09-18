@@ -45,7 +45,7 @@ export default function InstagramFeed() {
   }, []);
 
   return (
-    <section className="py-24 bg-[var(--color-roxo-900)] border-t border-[var(--color-linha)]">
+    <section id="blog" className="py-24 bg-[var(--color-roxo-900)] border-t border-[var(--color-linha)]">
       <div className="wrap">
         <div className="text-center mb-12">
           <span className="eyebrow justify-center mb-4">Redes Sociais</span>

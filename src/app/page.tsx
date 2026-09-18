@@ -5,6 +5,7 @@ import Atalhos from "@/app/components/Atalhos";
 import BaixeApp from "@/app/components/BaixeApp";
 import Cobertura from "@/app/components/Cobertura";
 import Rede from "@/app/components/Rede";
+import Valores from "@/app/components/Valores";
 import Empresas from "@/app/components/Empresas";
 import Conformidade from "@/app/components/Conformidade";
 import Faq from "@/app/components/Faq";
@@ -22,6 +23,7 @@ export default function Home() {
       <BaixeApp />
       <Cobertura />
       <Rede />
+      <Valores />
       <Conformidade />
       <Negotiation />
       <InstagramFeed />

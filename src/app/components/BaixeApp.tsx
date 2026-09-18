@@ -15,7 +15,7 @@ export default function BaixeApp({
   const [rightImgError, setRightImgError] = useState(false);
 
   return (
-    <section id="baixe-app" className="py-16 md:py-24 relative overflow-hidden">
+    <section id="fabreuapp" className="py-16 md:py-24 relative overflow-hidden">
       <div className="wrap">
         {/* Banner Card */}
         <div className="relative rounded-[28px] md:rounded-[36px] bg-gradient-to-r from-[#3B0766] via-[#5C169F] to-[#2D0452] p-8 sm:p-12 lg:p-14 border border-white/15 shadow-[0_25px_60px_rgba(0,0,0,0.5)] overflow-hidden">

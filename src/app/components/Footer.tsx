@@ -50,6 +50,7 @@ export default function Footer() {
             <a href="#planos" className="text-[0.9rem] text-[#DCD2EA] hover:text-white transition-colors">Planos</a>
             <a href="#apps" className="text-[0.9rem] text-[#DCD2EA] hover:text-white transition-colors">Apps inclusos</a>
             <a href="#cobertura" className="text-[0.9rem] text-[#DCD2EA] hover:text-white transition-colors">Área de cobertura</a>
+            <a href="#sobre" className="text-[0.9rem] text-[#DCD2EA] hover:text-white transition-colors">Sobre a Fabreu</a>
             <a href="#viabilidade" className="text-[0.9rem] text-[#DCD2EA] hover:text-white transition-colors">Consultar viabilidade</a>
             <a href="#empresas" className="text-[0.9rem] text-[#DCD2EA] hover:text-white transition-colors">Empresas</a>
           </nav>
