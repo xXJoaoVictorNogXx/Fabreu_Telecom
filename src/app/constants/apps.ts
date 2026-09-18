@@ -1,7 +1,6 @@
 import { AppCanal, CategoriaApp } from "@/app/types/appsTypes";
 
 export const appsDisponiveis: AppCanal[] = [
-  { title: 'Watch Brasil', desc: 'Séries e filmes', icon: '/watch.png', categoria: 'entretenimento' },
   { title: 'Deezer', desc: 'Streaming de músicas', icon: '/Deezer.svg', categoria: 'entretenimento' },
   { title: 'ESPN', desc: 'Esportes em geral', icon: '/ESPN.svg', categoria: 'esporte' },
   { title: 'CNN', desc: 'Canal de notícias', icon: '/cnn.svg', categoria: 'jornalismo' },
