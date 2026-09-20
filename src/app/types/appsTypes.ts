@@ -1,4 +1,4 @@
-export type CategoriaApp = 'todos' | 'canais abertos' | 'esporte' | 'entretenimento' | 'jornalismo' | 'kids';
+export type CategoriaApp = 'todos' | 'canais abertos' | 'esporte' | 'educação' | 'entretenimento' | 'jornalismo' | 'kids';
 
 export type AppCanal = {
   title: string;

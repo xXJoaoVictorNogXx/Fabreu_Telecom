@@ -19,7 +19,7 @@ export default function Planos() {
   const planosAtuais = categoria === 'residencial' ? planosResidenciais : planosEmpresariais;
   const appsFiltrados = categoriaApp === 'todos'
     ? appsDisponiveis
-    : appsDisponiveis.filter((app) => app.categoria === categoriaApp);  
+    : appsDisponiveis.filter((app) => app.categoria === categoriaApp);
 
   return (
     <section id="planos" className="relative py-[84px] bg-roxo-850 border-y border-linha max-[620px]:py-[60px]">
@@ -115,7 +115,11 @@ export default function Planos() {
               )}
 
               <div className="mt-auto w-full">
-                <Link href="#viabilidade" className={`btn w-full ${plano.destaque ? 'btn-primario' : 'btn-linha'}`}>
+                <Link
+                  href={`https://wa.me/559984637356?text=Olá! Gostaria de assinar o plano ${plano.mega} Mega.`}
+                  target="_blank"
+                  className={`btn w-full ${plano.destaque ? 'btn-primario' : 'btn-linha'}`}
+                >
                   Assinar agora
                 </Link>
               </div>

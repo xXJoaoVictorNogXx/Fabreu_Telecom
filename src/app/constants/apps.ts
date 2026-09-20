@@ -10,7 +10,7 @@ export const appsDisponiveis: AppCanal[] = [
   { title: 'Globoplay', desc: 'Streaming de filmes e séries', icon: '/Globoplay.svg', categoria: 'entretenimento' },
   { title: 'Paramount', desc: 'Streaming de filmes e séries', icon: '/Paramount.svg', categoria: 'entretenimento' },
   { title: 'Premiere', desc: 'Esportes em geral', icon: '/Premiere.png', categoria: 'esporte' },
-  { title: 'LevEduca', desc: 'Plataforma educativa e aulas', icon: '/lev.png', categoria: 'kids' },
+  { title: 'LevEduca', desc: 'Plataforma educativa e aulas', icon: '/lev.png', categoria: 'educação' },
   { title: 'Fabreutv', desc: 'Streaming de filmes e séries', icon: '/fabreutv.png', categoria: 'entretenimento' },
   { title: 'SporTV', desc: 'Esportes em geral', icon: '/SporTV.svg', categoria: 'esporte' },
   { title: 'Universal', desc: 'Streaming de filmes e séries', icon: '/Universal.svg', categoria: 'entretenimento' },
@@ -28,13 +28,17 @@ export const appsDisponiveis: AppCanal[] = [
   { title: 'Megapix', desc: 'Filmes e sucessos do cinema', icon: '/Megapix.svg', categoria: 'entretenimento' },
   { title: 'TNT', desc: 'Filmes, séries e eventos', icon: '/TNT.svg', categoria: 'entretenimento' },
   { title: 'Multishow', desc: 'Humor, música e entretenimento', icon: '/Multishow.png', categoria: 'entretenimento' },
-  { title: 'Cartoon Network', desc: 'Desenhos e programas infantis', icon: '/cartoon-network.png', categoria: 'kids' },
+  { title: 'edyelogo', desc: 'Desenhos e programas infantis', icon: '/edyelogo.png', categoria: 'kids' },
+  { title: 'Gloob_logo', desc: 'Desenhos e programas infantis', icon: '/Gloob_logo.png', categoria: 'kids' },
+  { title: 'Gloobinho_logo', desc: 'Desenhos e programas infantis', icon: '/Gloobinho_logo.svg', categoria: 'kids' },
+  { title: 'TV_Rá-Tim-Bum', desc: 'Desenhos e programas infantis', icon: '/TV_Rá-Tim-Bum.png', categoria: 'kids' },
 ];
 
 export const categoriasSwitch: { id: CategoriaApp; label: string }[] = [
   { id: 'todos', label: 'Todos' },
   { id: 'canais abertos', label: 'Canais abertos' },
   { id: 'esporte', label: 'Esporte' },
+  { id: 'educação', label: 'Educação' },
   { id: 'entretenimento', label: 'Entretenimento / Filmes / Música' },
   { id: 'jornalismo', label: 'Jornalismo' },
   { id: 'kids', label: 'Kids' },
