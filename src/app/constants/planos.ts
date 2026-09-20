@@ -3,7 +3,7 @@ import { Plano } from "@/app/types/planosTypes";
 export const planosResidenciais: Plano[] = [
   {
     mega: '1000 Mega',
-    perfil: 'Ideal para streaming, redes sociais e home office básico.',
+    perfil: 'A experiência máxima. Tudo ao mesmo tempo, sem limites.',
     preco: '149,90',
     destaque: false,
     beneficios: ['Dual Band (2.4G e 5G)',
@@ -18,7 +18,7 @@ export const planosResidenciais: Plano[] = [
   },
   {
     mega: '500',
-    perfil: 'Perfeito para famílias, vários dispositivos e jogos online.',
+    perfil: 'Ideal para streaming, redes sociais e home office básico.',
     preco: '95,00',
     destaque: true,
     tag: 'Mais vendido',
@@ -34,7 +34,7 @@ export const planosResidenciais: Plano[] = [
   },
   {
     mega: '800',
-    perfil: 'A experiência máxima. Tudo ao mesmo tempo, sem limites.',
+    perfil: 'Perfeito para famílias, vários dispositivos e jogos online.',
     preco: '125,00',
     destaque: false,
     beneficios: ['Dual Band (2.4G e 5G)',
