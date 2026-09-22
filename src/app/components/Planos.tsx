@@ -71,7 +71,7 @@ export default function Planos() {
                 </div>
               )}
               <div className="font-display font-extrabold text-[2.9rem] leading-none tracking-tight">
-                {plano.mega} <small className="text-[1rem] font-semibold text-cinza tracking-normal">Mega</small>
+                {plano.mega} <small className="text-[1rem] font-semibold text-cinza tracking-normal">{plano.mega === '1' ? 'Giga' : 'Mega'}</small>
               </div>
               <p className="text-[0.86rem] text-amarelo-claro my-2 min-h-[2.6em]">{plano.perfil}</p>
 

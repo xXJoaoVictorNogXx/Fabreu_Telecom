@@ -2,7 +2,7 @@ import { Plano } from "@/app/types/planosTypes";
 
 export const planosResidenciais: Plano[] = [
   {
-    mega: '1 Giga',
+    mega: '1',
     perfil: 'A experiência máxima. Tudo ao mesmo tempo, sem limites.',
     preco: '149,90',
     destaque: false,
