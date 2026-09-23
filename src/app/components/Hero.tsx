@@ -80,7 +80,7 @@ export default function Hero() {
                     onClick={() => setSelectedIndex(i)}
                     className={`flex-1 py-1.5 text-xs font-bold rounded-full transition-all duration-300 ${selectedIndex === i ? 'bg-magenta text-white shadow-md' : 'text-cinza hover:text-white'}`}
                   >
-                    {plano.mega} Mega
+                    {plano.mega} {plano.mega == '1' ? "Giga" : "Mega"}
                   </button>
                 ))}
               </div>
@@ -108,7 +108,7 @@ export default function Hero() {
               </svg>
               <div className="valor absolute top-[56%] text-center">
                 <b className="font-display text-[2.5rem] block leading-none">{planoSelecionado.mega}</b>
-                <span className="text-[0.78rem] text-cinza tracking-[0.14em] uppercase">Mega</span>
+                <span className="text-[0.78rem] text-cinza tracking-[0.14em] uppercase">{planoSelecionado.mega == '1' ? "Giga" : "Mega"}</span>
               </div>
             </div>
 

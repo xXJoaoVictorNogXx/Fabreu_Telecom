@@ -66,7 +66,7 @@ export const planosEmpresariais: Plano[] = [
     beneficios: ['IP Fixo Opcional', 'Banda simétrica', 'SLA Garantido'],
   },
   {
-    mega: '1000',
+    mega: '1',
     perfil: 'Conexão máxima para empresas robustas e servidores locais.',
     preco: '299,90',
     destaque: false,
@@ -87,7 +87,7 @@ export const planosResidenciaisHome = [
     beneficios: ['Download até 800 Mbps', 'Ping otimizado para jogos'],
   },
   {
-    mega: '1000',
+    mega: '1',
     percent: 100,
     beneficios: ['Download até 1000 Mbps', 'Wi-Fi 6 de última geração'],
   }
@@ -105,7 +105,7 @@ export const planosEmpresariaisHome = [
     beneficios: ['Banda simétrica', 'SLA Garantido'],
   },
   {
-    mega: '1000',
+    mega: '1',
     percent: 100,
     beneficios: ['Rotas redundantes', 'Gerente de contas exclusivo'],
   }
