@@ -22,8 +22,25 @@ export default function Planos() {
     : appsDisponiveis.filter((app) => app.categoria === categoriaApp);
 
   return (
-    <section id="planos" className="relative py-[84px] bg-roxo-850 border-y border-linha max-[620px]:py-[60px]">
-      <div className="wrap">
+    <section id="planos" className="relative py-[84px] border-y border-linha max-[620px]:py-[60px] overflow-hidden">
+      <div className="hero-bg"></div>
+      <div className="fibras absolute inset-0 z-0 opacity-55 pointer-events-none">
+        <svg viewBox="0 0 1440 620" preserveAspectRatio="xMidYMid slice" className="w-full h-full">
+          <path d="M-100,520 C320,520 480,120 1540,120" stroke="rgba(213,0,206,.6)" />
+          <path className="pulso" d="M-100,520 C320,520 480,120 1540,120" stroke="#fff" />
+
+          <path d="M-100,600 C280,600 420,240 1540,240" stroke="rgba(248,175,45,.6)" />
+          <path className="pulso b" d="M-100,600 C280,600 420,240 1540,240" stroke="#fff" />
+
+          <path d="M-100,440 C380,440 560,80 1540,80" stroke="rgba(213,0,206,.6)" />
+          <path className="pulso c" d="M-100,440 C380,440 560,80 1540,80" stroke="#fff" />
+
+          <path d="M-100,680 C240,680 380,360 1540,360" stroke="rgba(248,175,45,.6)" />
+          <path className="pulso d" d="M-100,680 C240,680 380,360 1540,360" stroke="#fff" />
+        </svg>
+      </div>
+
+      <div className="wrap relative z-10">
         <div className="flex justify-between items-end gap-[30px] mb-8 flex-wrap">
           <div>
             <div className="eyebrow">Planos {categoria === 'residencial' ? 'Residenciais' : 'Empresariais'}</div>
@@ -71,7 +88,7 @@ export default function Planos() {
                 </div>
               )}
               <div className="font-display font-extrabold text-[2.9rem] leading-none tracking-tight">
-                {plano.mega} <small className="text-[1rem] font-semibold text-cinza tracking-normal">{plano.mega === '1' ? 'Giga' : 'Mega'}</small>
+                {plano.mega} <small className="text-[2rem] font-semibold text-branco tracking-normal">{plano.mega === '1' ? 'Giga' : 'Mega'}</small>
               </div>
               <p className="text-[0.86rem] text-amarelo-claro my-2 min-h-[2.6em]">{plano.perfil}</p>
 
