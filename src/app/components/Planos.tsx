@@ -22,23 +22,9 @@ export default function Planos() {
     : appsDisponiveis.filter((app) => app.categoria === categoriaApp);
 
   return (
-    <section id="planos" className="relative py-[84px] border-y border-linha max-[620px]:py-[60px] overflow-hidden">
-      <div className="hero-bg"></div>
-      <div className="fibras absolute inset-0 z-0 opacity-55 pointer-events-none">
-        <svg viewBox="0 0 1440 620" preserveAspectRatio="xMidYMid slice" className="w-full h-full">
-          <path d="M-100,520 C320,520 480,120 1540,120" stroke="rgba(213,0,206,.6)" />
-          <path className="pulso" d="M-100,520 C320,520 480,120 1540,120" stroke="#fff" />
-
-          <path d="M-100,600 C280,600 420,240 1540,240" stroke="rgba(248,175,45,.6)" />
-          <path className="pulso b" d="M-100,600 C280,600 420,240 1540,240" stroke="#fff" />
-
-          <path d="M-100,440 C380,440 560,80 1540,80" stroke="rgba(213,0,206,.6)" />
-          <path className="pulso c" d="M-100,440 C380,440 560,80 1540,80" stroke="#fff" />
-
-          <path d="M-100,680 C240,680 380,360 1540,360" stroke="rgba(248,175,45,.6)" />
-          <path className="pulso d" d="M-100,680 C240,680 380,360 1540,360" stroke="#fff" />
-        </svg>
-      </div>
+    <section id="planos" className="relative py-[84px] bg-roxo-850 border-y border-linha max-[620px]:py-[60px] overflow-hidden">
+      {/* Mantendo apenas o background estático para não pesar a performance */}
+      <div className="hero-bg opacity-30"></div>
 
       <div className="wrap relative z-10">
         <div className="flex justify-between items-end gap-[30px] mb-8 flex-wrap">
