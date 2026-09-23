@@ -8,10 +8,7 @@ import Empresas from "./Empresas";
 import { CategoriaApp } from "@/app/types/appsTypes";
 import { appsDisponiveis, categoriasSwitch } from "@/app/constants/apps";
 import { planosResidenciais, planosEmpresariais } from "@/app/constants/planos";
-
-
-
-
+import FibrasBackground from "./FibrasBackground";
 export default function Planos() {
   const [categoria, setCategoria] = useState<'residencial' | 'empresarial'>('residencial');
   const [categoriaApp, setCategoriaApp] = useState<CategoriaApp>('todos');
@@ -23,8 +20,9 @@ export default function Planos() {
 
   return (
     <section id="planos" className="relative py-[84px] bg-roxo-850 border-y border-linha max-[620px]:py-[60px] overflow-hidden">
-      {/* Mantendo apenas o background estático para não pesar a performance */}
+      {/* Adicionado background dinâmico otimizado (só anima quando visível) */}
       <div className="hero-bg opacity-30"></div>
+      <FibrasBackground className="opacity-25" />
 
       <div className="wrap relative z-10">
         <div className="flex justify-between items-end gap-[30px] mb-8 flex-wrap">

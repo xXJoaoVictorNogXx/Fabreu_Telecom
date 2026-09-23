@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { planosEmpresariaisHome, planosResidenciaisHome } from "../constants/planos";
-
+import FibrasBackground from "./FibrasBackground";
 
 export default function Hero() {
   const [categoria, setCategoria] = useState<'residencial' | 'empresarial'>('residencial');
@@ -16,21 +16,7 @@ export default function Hero() {
   return (
     <section className="hero relative py-[86px] pb-[72px] overflow-hidden">
       <div className="hero-bg"></div>
-      <div className="fibras absolute inset-0 z-0 opacity-55 pointer-events-none">
-        <svg viewBox="0 0 1440 620" preserveAspectRatio="xMidYMid slice" className="w-full h-full">
-          <path d="M-100,520 C320,520 480,120 1540,120" stroke="rgba(213,0,206,.6)" />
-          <path className="pulso" d="M-100,520 C320,520 480,120 1540,120" stroke="#fff" />
-
-          <path d="M-100,600 C280,600 420,240 1540,240" stroke="rgba(248,175,45,.6)" />
-          <path className="pulso b" d="M-100,600 C280,600 420,240 1540,240" stroke="#fff" />
-
-          <path d="M-100,440 C380,440 560,80 1540,80" stroke="rgba(213,0,206,.6)" />
-          <path className="pulso c" d="M-100,440 C380,440 560,80 1540,80" stroke="#fff" />
-
-          <path d="M-100,680 C240,680 380,360 1540,360" stroke="rgba(248,175,45,.6)" />
-          <path className="pulso d" d="M-100,680 C240,680 380,360 1540,360" stroke="#fff" />
-        </svg>
-      </div>
+      <FibrasBackground className="opacity-55" />
 
       <div className="wrap relative z-10 grid grid-cols-[1.15fr_0.85fr] gap-14 items-center max-[980px]:grid-cols-1">
         <div>
