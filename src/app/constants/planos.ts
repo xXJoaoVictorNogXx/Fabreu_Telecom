@@ -30,7 +30,7 @@ export const planosResidenciais: Plano[] = [
       'Wi-Fi 6 Grátis',
       'Atendimento Premium',
       'Suporte Nível 3'],
-    apps: [{ name: 'Watch', icon: '/watch.png' }, { name: 'Watch', icon: '/Deezer.svg' }, { name: 'Skeelo', icon: '/fabreutv.png' }, { name: 'Skeelo', icon: '/lev.png' }],
+    apps: [ { name: 'Skeelo', icon: '/fabreutv.png' },{ name: 'Watch', icon: '/Deezer.svg' },{ name: 'Watch', icon: '/watch.png' },  { name: 'Skeelo', icon: '/lev.png' }],
   },
   {
     mega: '800',
