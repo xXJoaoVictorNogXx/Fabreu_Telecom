@@ -5,8 +5,8 @@ export const appsDisponiveis: AppCanal[] = [
   { title: 'ESPN', desc: 'Esportes em geral', icon: '/ESPN.svg', categoria: 'esporte' },
   { title: 'CNN', desc: 'Canal de notícias', icon: '/cnn.svg', categoria: 'jornalismo' },
   { title: 'GloboNews', desc: 'Jornalismo 24 horas', icon: '/GloboNews.webp', categoria: 'jornalismo' },
-  { title: 'HBOMax', desc: 'Streaming de filmes e séries', icon: '/HBO_Max.svg', categoria: 'entretenimento' },
-  { title: 'GeTV', desc: 'Esportes no YouTube', icon: '/getv.png', categoria: 'esporte' },
+  { title: 'HBO Max', desc: 'Streaming de filmes e séries', icon: '/HBO_Max.svg', categoria: 'entretenimento' },
+  { title: 'Ge TV', desc: 'Esportes no YouTube', icon: '/getv.png', categoria: 'esporte' },
   { title: 'Globoplay', desc: 'Streaming de filmes e séries', icon: '/Globoplay.svg', categoria: 'entretenimento' },
   { title: 'Premiere', desc: 'Esportes em geral', icon: '/Premiere.png', categoria: 'esporte' },
   { title: 'LevEduca', desc: 'Plataforma educativa e aulas', icon: '/lev.png', categoria: 'educação' },
@@ -27,10 +27,10 @@ export const appsDisponiveis: AppCanal[] = [
   { title: 'Megapix', desc: 'Filmes e sucessos do cinema', icon: '/Megapix.svg', categoria: 'entretenimento' },
   { title: 'TNT', desc: 'Filmes, séries e eventos', icon: '/TNT.svg', categoria: 'entretenimento' },
   { title: 'Multishow', desc: 'Humor, música e entretenimento', icon: '/Multishow.png', categoria: 'entretenimento' },
-  { title: 'edyelogo', desc: 'Desenhos e programas infantis', icon: '/edyelogo.png', categoria: 'kids' },
-  { title: 'Gloob_logo', desc: 'Desenhos e programas infantis', icon: '/Gloob_logo.png', categoria: 'kids' },
-  { title: 'Gloobinho_logo', desc: 'Desenhos e programas infantis', icon: '/Gloobinho_logo.svg', categoria: 'kids' },
-  { title: 'TV_Rá-Tim-Bum', desc: 'Desenhos e programas infantis', icon: '/TV_Rá-Tim-Bum.png', categoria: 'kids' },
+  { title: 'Edye', desc: 'Desenhos e programas infantis', icon: '/edyelogo.png', categoria: 'kids' },
+  { title: 'Gloob', desc: 'Desenhos e programas infantis', icon: '/Gloob_logo.png', categoria: 'kids' },
+  { title: 'Gloobinho', desc: 'Desenhos e programas infantis', icon: '/Gloobinho_logo.svg', categoria: 'kids' },
+  { title: 'TV Rá-Tim-Bum', desc: 'Desenhos e programas infantis', icon: '/TV_Rá-Tim-Bum.png', categoria: 'kids' },
 ];
 
 export const categoriasSwitch: { id: CategoriaApp; label: string }[] = [
