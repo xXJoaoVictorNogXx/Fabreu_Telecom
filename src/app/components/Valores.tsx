@@ -33,6 +33,12 @@ function ValorIcon({ name }: { name: string }) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       );
+    case "inovacao":
+      return (
+        <svg className="w-7 h-7 text-[#F8AF2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      );
     default:
       return null;
   }
@@ -43,15 +49,12 @@ export default function Valores() {
 
   return (
     <section id="sobre" className="relative py-16 md:py-24 border-b border-roxo-600/20 overflow-hidden bg-gradient-to-b from-[#1A0128] via-[#240340] to-[#1A0128]">
-      {/* Background radial glows for aesthetic atmosphere */}
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-magenta/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-amarelo/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="wrap relative z-10">
-        
-        {/* ROW 1: História / Missão + Foto 1 */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch mb-8 md:mb-12">
-          {/* Card Texto 1 */}
           <div className="bg-[#2a0448]/90 backdrop-blur-md border border-roxo-600/30 rounded-[28px] p-8 md:p-10 flex flex-col justify-center shadow-xl hover:border-roxo-600/50 transition-all duration-300">
             <div className="eyebrow mb-4">{historia.eyebrow}</div>
             <h2 className="text-[1.85rem] sm:text-[2.2rem] lg:text-[2.5rem] font-display font-bold leading-[1.15] text-white mb-5">
@@ -63,7 +66,6 @@ export default function Valores() {
             </p>
           </div>
 
-          {/* Foto 1 - Next.js Image */}
           <div className="relative w-full h-[320px] sm:h-[380px] md:h-auto min-h-[300px] rounded-[28px] overflow-hidden border border-roxo-600/30 bg-[#250442] shadow-2xl">
             <Image
               src={historia.imagem}
@@ -74,9 +76,7 @@ export default function Valores() {
           </div>
         </div>
 
-        {/* ROW 2: Foto 2 + Nossa Filosofia */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch mb-16 md:mb-20">
-          {/* Foto 2 - Next.js Image (à esquerda em desktop) */}
           <div className="order-2 md:order-1 relative w-full h-[320px] sm:h-[380px] md:h-auto min-h-[300px] rounded-[28px] overflow-hidden border border-roxo-600/30 bg-[#250442] shadow-2xl">
             <Image
               src={filosofia.imagem}
@@ -86,7 +86,6 @@ export default function Valores() {
             />
           </div>
 
-          {/* Card Texto 2 */}
           <div className="order-1 md:order-2 bg-[#2a0448]/90 backdrop-blur-md border border-roxo-600/30 rounded-[28px] p-8 md:p-10 flex flex-col justify-center shadow-xl hover:border-roxo-600/50 transition-all duration-300">
             <h2 className="text-[1.85rem] sm:text-[2.2rem] lg:text-[2.5rem] font-display font-bold leading-[1.15] text-amarelo mb-5">
               {filosofia.titleHighlight}
@@ -105,7 +104,7 @@ export default function Valores() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {valores.map((item) => (
               <div
                 key={item.id}

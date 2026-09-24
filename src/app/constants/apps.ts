@@ -8,7 +8,6 @@ export const appsDisponiveis: AppCanal[] = [
   { title: 'HBOMax', desc: 'Streaming de filmes e séries', icon: '/HBO_Max.svg', categoria: 'entretenimento' },
   { title: 'GeTV', desc: 'Esportes no YouTube', icon: '/getv.png', categoria: 'esporte' },
   { title: 'Globoplay', desc: 'Streaming de filmes e séries', icon: '/Globoplay.svg', categoria: 'entretenimento' },
-  { title: 'Paramount', desc: 'Streaming de filmes e séries', icon: '/Paramount.svg', categoria: 'entretenimento' },
   { title: 'Premiere', desc: 'Esportes em geral', icon: '/Premiere.png', categoria: 'esporte' },
   { title: 'LevEduca', desc: 'Plataforma educativa e aulas', icon: '/lev.png', categoria: 'educação' },
   { title: 'Fabreutv', desc: 'Streaming de filmes e séries', icon: '/fabreutv.png', categoria: 'entretenimento' },

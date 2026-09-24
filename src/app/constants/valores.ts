@@ -2,7 +2,7 @@ export interface ValorItem {
   id: string;
   title: string;
   description: string;
-  iconName: 'proximidade' | 'excelencia' | 'compromisso' | 'transparencia' | 'melhoria';
+  iconName: 'proximidade' | 'excelencia' | 'compromisso' | 'transparencia' | 'melhoria' | 'inovacao';
 }
 
 export const SOBRE_FABREU_DATA = {
@@ -52,6 +52,12 @@ export const SOBRE_FABREU_DATA = {
       title: "Melhoria Contínua",
       description: "Evoluindo sempre. Não nos acomodamos. Buscamos constantemente novas soluções e aprimoramentos para superar as suas expectativas.",
       iconName: "melhoria",
+    },
+    {
+      id: "inovacao",
+      title: "Inovação",
+      description: "Olhando para o futuro. Investimos nas melhores tecnologias para garantir que você tenha acesso ao que há de mais moderno.",
+      iconName: "inovacao",
     },
   ] as ValorItem[],
 };
