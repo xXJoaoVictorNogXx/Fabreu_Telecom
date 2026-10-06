@@ -89,7 +89,7 @@ export const comparativoEmpresarial = [
   { feature: 'Internet 100% Fibra Óptica', start: true, plus: true, ultra: true, giga: true },
   { feature: 'Internet ilimitada', start: true, plus: true, ultra: true, giga: true },
   { feature: 'Instalação e configuração grátis', start: true, plus: true, ultra: true, giga: true },
-  { feature: 'Dual Band', start: '2.4G', plus: '2.4G e 5G', ultra: '2.4G e 5G', giga: '2.4G e 5G' },
+  { feature: 'Dual Band', start: '2.4G e 5G', plus: '2.4G e 5G', ultra: '2.4G e 5G', giga: '2.4G e 5G' },
   { feature: 'Rede Wi-Fi', start: 'Grátis', plus: 'Wi-Fi 6 Corporativa', ultra: 'Wi-Fi 6 Corporativa', giga: 'Wi-Fi 6 Corporativa' },
   { feature: 'Wi-Fi 6 para visitantes', start: false, plus: true, ultra: true, giga: true },
   { feature: 'Atendimento Premium', start: true, plus: true, ultra: true, giga: true },
