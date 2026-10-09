@@ -7,7 +7,7 @@ import Infraestrutura from "./Infraestrutura";
 import Empresas from "./Empresas";
 import { CategoriaApp } from "@/app/types/appsTypes";
 import { appsDisponiveis, categoriasSwitch } from "@/app/constants/apps";
-import { planosResidenciais, planosEmpresariais } from "@/app/constants/planos";
+import { planosResidenciais, planosEmpresariais, comparativoEmpresarial } from "@/app/constants/planos";
 import FibrasBackground from "./FibrasBackground";
 export default function Planos() {
   const [categoria, setCategoria] = useState<'residencial' | 'empresarial'>('residencial');
@@ -60,76 +60,130 @@ export default function Planos() {
           </div>
         </div>
 
-        <div className={`grid gap-5 max-[980px]:grid-cols-2 max-[620px]:grid-cols-1 ${categoria === 'empresarial' ? 'grid-cols-3 max-w-5xl mx-auto' : 'grid-cols-3'}`}>
-          {planosAtuais.map((plano, i) => (
-            <div key={i} className={`relative flex flex-col p-[26px_22px_24px] rounded-raio border transition-all duration-220 hover:-translate-y-1.5 ${plano.destaque
-              ? 'border-amarelo bg-gradient-to-b from-amarelo/10 to-white/5'
-              : 'border-linha-forte bg-gradient-to-b from-white/5 to-white/2 hover:border-magenta'
-              }`}>
-              {plano.tag && (
-                <div className="absolute -top-3 left-[22px] bg-amarelo text-roxo-900 font-display text-[0.68rem] font-bold tracking-[0.12em] uppercase py-1 px-3 rounded-full">
-                  {plano.tag}
-                </div>
-              )}
-              <div className="font-display font-extrabold text-[2.9rem] leading-none tracking-tight">
-                {plano.mega} <small className="text-[2rem] font-semibold text-branco tracking-normal">{plano.mega === '1' ? 'Giga' : 'Mega'}</small>
-              </div>
-              <p className="text-[0.86rem] text-amarelo-claro my-2 min-h-[2.6em]">{plano.perfil}</p>
-
-              <div className="font-display text-[1.9rem] font-bold flex items-baseline gap-1">
-                <span className="text-[1rem] font-semibold">R$</span>
-                {plano.preco}
-                <span className="text-[0.85rem] text-cinza font-normal font-corpo">/mês</span>
-              </div>
-
-              <ul className="list-none mt-[18px] mb-4 p-0 grid gap-2 text-[0.86rem] text-[#DDD3EB]">
-                {plano.beneficios.map((ben, j) => (
-                  <li key={j} className="flex gap-2 items-start">
-                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-magenta mt-2"></span>
-                    {ben}
-                  </li>
-                ))}
-              </ul>
-
-              {plano.apps && plano.apps.length > 0 && (
-                <div className="mb-6 w-full text-center border-t border-linha pt-4">
-                  <p className="text-[10px] font-bold text-cinza uppercase tracking-widest mb-3">
-                    Aplicativos Inclusos
-                  </p>
-                  <div className="flex flex-wrap items-center justify-center gap-2">
-                    {plano.apps?.map((appName, index) => (
-                      <div
-                        key={index}
-                        className="w-10 h-10 rounded-xl bg-white flex items-center justify-center p-1.5 shadow-sm border border-transparent hover:border-amarelo transition-colors"
-                      >
-                        <Image
-                          alt={`Logo do app ${appName.name}`}
-                          className="w-full h-full object-contain"
-                          width={40}
-                          height={40}
-                          src={appName.icon}
-                        />
-                      </div>
+        {categoria === 'empresarial' ? (
+          <div className="w-full max-w-5xl mx-auto">
+            <div className="overflow-x-auto rounded-xl border border-linha-forte bg-[#1A0128]/40 shadow-xl backdrop-blur-sm custom-scrollbar">
+              <table className="w-full text-left min-w-[800px] border-collapse">
+                <thead>
+                  <tr className="border-b border-linha-forte">
+                    <th className="p-6 bg-white/5 w-[28%] align-bottom">
+                      <span className="text-xl font-display font-bold text-white">Benefícios</span>
+                    </th>
+                    {planosEmpresariais.map((plano, i) => (
+                      <th key={plano.title} className={`p-6 text-center align-top ${plano.destaque ? 'bg-amarelo/10 border-t-4 border-t-amarelo' : 'bg-white/5 border-t-4 border-t-transparent border-l border-linha/20'}`}>
+                        {plano.tag && (
+                          <div className="inline-block bg-amarelo text-roxo-900 font-display text-[0.65rem] font-bold tracking-[0.1em] uppercase py-0.5 px-2 rounded-full mb-2">
+                            {plano.tag}
+                          </div>
+                        )}
+                        <div className="text-amarelo font-bold tracking-widest text-sm mb-1 uppercase">{plano.title}</div>
+                        <div className="font-display font-extrabold text-[2rem] leading-none text-white tracking-tight">
+                          {plano.mega} <small className="text-[1.2rem] font-semibold tracking-normal">{plano.mega === '1' ? 'Giga' : 'Mega'}</small>
+                        </div>
+                        <div className="font-display text-xl font-bold flex items-baseline justify-center gap-1 mt-2 text-white">
+                          <span className="text-sm font-semibold">R$</span>
+                          {plano.preco}
+                          <span className="text-[0.7rem] text-cinza font-normal font-corpo">/mês</span>
+                        </div>
+                        <div className="mt-5 w-full">
+                          <Link href={`https://wa.me/559984637356?text=Olá! Gostaria de assinar o plano empresarial ${plano.title} de ${plano.mega} Mega.`} target="_blank" className={`btn w-full px-2 py-2.5 text-[0.8rem] ${plano.destaque ? 'btn-primario' : 'btn-linha'}`}>Assinar agora</Link>
+                        </div>
+                      </th>
                     ))}
-                  </div>
-                </div>
-              )}
-
-              <div className="mt-auto w-full">
-                <Link
-                  href={`https://wa.me/559984637356?text=Olá! Gostaria de assinar o plano ${plano.mega} Mega.`}
-                  target="_blank"
-                  className={`btn w-full ${plano.destaque ? 'btn-primario' : 'btn-linha'}`}
-                >
-                  Assinar agora
-                </Link>
-              </div>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparativoEmpresarial.map((row, i) => (
+                    <tr key={i} className="border-b border-linha/30 hover:bg-white/5 transition-colors">
+                      <td className="p-4 text-[0.86rem] text-[#DDD3EB] border-r border-linha/30 font-medium">{row.feature}</td>
+                      <td className="p-4 text-center text-[0.86rem] border-r border-linha/30 text-cinza">
+                        {typeof row.start === 'boolean' ? (row.start ? <span className="inline-flex justify-center text-amarelo">✔</span> : <span className="inline-flex justify-center text-red-400/50">✖</span>) : row.start}
+                      </td>
+                      <td className={`p-4 text-center text-[0.86rem] border-r border-linha/30 text-cinza ${planosEmpresariais[1].destaque ? 'bg-amarelo/5' : ''}`}>
+                        {typeof row.plus === 'boolean' ? (row.plus ? <span className="inline-flex justify-center text-amarelo">✔</span> : <span className="inline-flex justify-center text-red-400/50">✖</span>) : row.plus}
+                      </td>
+                      <td className="p-4 text-center text-[0.86rem] border-r border-linha/30 text-cinza">
+                        {typeof row.ultra === 'boolean' ? (row.ultra ? <span className="inline-flex justify-center text-amarelo">✔</span> : <span className="inline-flex justify-center text-red-400/50">✖</span>) : row.ultra}
+                      </td>
+                      <td className="p-4 text-center text-[0.86rem] text-cinza">
+                        {typeof row.giga === 'boolean' ? (row.giga ? <span className="inline-flex justify-center text-amarelo">✔</span> : <span className="inline-flex justify-center text-red-400/50">✖</span>) : row.giga}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          ))}
-        </div>
-        {categoria === 'empresarial' && (
-          <div className="mt-14 max-w-5xl mx-auto w-full">
-            <Empresas />
+            <div className="mt-14 w-full">
+              <Empresas />
+            </div>
+          </div>
+        ) : (
+          <div className="grid gap-5 max-[980px]:grid-cols-2 max-[620px]:grid-cols-1 grid-cols-3">
+            {planosResidenciais.map((plano, i) => (
+              <div key={i} className={`relative flex flex-col p-[26px_22px_24px] rounded-raio border transition-all duration-220 hover:-translate-y-1.5 ${plano.destaque
+                ? 'border-amarelo bg-gradient-to-b from-amarelo/10 to-white/5'
+                : 'border-linha-forte bg-gradient-to-b from-white/5 to-white/2 hover:border-magenta'
+                }`}>
+                {plano.tag && (
+                  <div className="absolute -top-3 left-[22px] bg-amarelo text-roxo-900 font-display text-[0.68rem] font-bold tracking-[0.12em] uppercase py-1 px-3 rounded-full">
+                    {plano.tag}
+                  </div>
+                )}
+                <div className="font-display font-extrabold text-[2.9rem] leading-none tracking-tight">
+                  {plano.mega} <small className="text-[2rem] font-semibold text-branco tracking-normal">{plano.mega === '1' ? 'Giga' : 'Mega'}</small>
+                </div>
+                <p className="text-[0.86rem] text-amarelo-claro my-2 min-h-[2.6em]">{plano.perfil}</p>
+  
+                <div className="font-display text-[1.9rem] font-bold flex items-baseline gap-1">
+                  <span className="text-[1rem] font-semibold">R$</span>
+                  {plano.preco}
+                  <span className="text-[0.85rem] text-cinza font-normal font-corpo">/mês</span>
+                </div>
+  
+                <ul className="list-none mt-[18px] mb-4 p-0 grid gap-2 text-[0.86rem] text-[#DDD3EB]">
+                  {plano.beneficios.map((ben, j) => (
+                    <li key={j} className="flex gap-2 items-start">
+                      <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-magenta mt-2"></span>
+                      {ben}
+                    </li>
+                  ))}
+                </ul>
+  
+                {plano.apps && plano.apps.length > 0 && (
+                  <div className="mb-6 w-full text-center border-t border-linha pt-4">
+                    <p className="text-[10px] font-bold text-cinza uppercase tracking-widest mb-3">
+                      Aplicativos Inclusos
+                    </p>
+                    <div className="flex flex-wrap items-center justify-center gap-2">
+                      {plano.apps?.map((appName, index) => (
+                        <div
+                          key={index}
+                          className="w-10 h-10 rounded-xl bg-white flex items-center justify-center p-1.5 shadow-sm border border-transparent hover:border-amarelo transition-colors"
+                        >
+                          <Image
+                            alt={`Logo do app ${appName.name}`}
+                            className="w-full h-full object-contain"
+                            width={40}
+                            height={40}
+                            src={appName.icon}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+  
+                <div className="mt-auto w-full">
+                  <Link
+                    href={`https://wa.me/559984637356?text=Olá! Gostaria de assinar o plano ${plano.mega} Mega.`}
+                    target="_blank"
+                    className={`btn w-full ${plano.destaque ? 'btn-primario' : 'btn-linha'}`}
+                  >
+                    Assinar agora
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         )}
         <p className="mt-[26px] text-[0.82rem] text-cinza max-w-[70ch] text-center mx-auto">

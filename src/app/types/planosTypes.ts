@@ -2,6 +2,7 @@ import { AppIncluso } from "./appsTypes";
 
 
 export type Plano = {
+  title?: string;
   mega: string;
   perfil: string;
   preco: string;
