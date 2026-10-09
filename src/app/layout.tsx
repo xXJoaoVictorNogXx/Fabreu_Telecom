@@ -21,7 +21,24 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Fabreu Telecom — Internet Fibra Óptica",
   description: "Sua internet não precisa ser um problema. Conexão rápida, estável e com suporte que atende de verdade.",
+  openGraph: {
+    title: 'Fabreu Telecom — Internet Fibra Óptica',
+    description: 'Sua internet não precisa ser um problema. Conexão rápida, estável e suporte local.',
+    url: 'https://www.fabreutelecom.net.br',
+    siteName: 'Fabreu Telecom',
+    images: [
+      {
+        url: '/logoFabreu.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Logótipo e serviços da Fabreu Telecom',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
 };
+
 
 export default function RootLayout({
   children,
